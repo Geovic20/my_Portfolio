@@ -14,69 +14,75 @@ export default function AboutPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 md:py-24">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
+      <section className="container mx-auto px-4 py-12 md:py-16 lg:py-24">
+        <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight px-4">
             {t("about.title")}{" "}
-            <span className="bg-[#2F81F7] text-white px-3 py-2 inline-block">{t("about.titleHighlight")}</span>
+            <span className="bg-[#2F81F7] text-white px-2 py-1 md:px-3 md:py-2 inline-block">
+              {t("about.titleHighlight")}
+            </span>
           </h1>
-          <p className="text-gray-600 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">{t("about.subtitle")}</p>
+          <p className="text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto px-4">
+            {t("about.subtitle")}
+          </p>
         </div>
       </section>
 
       {/* Main About Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <div className="flex justify-center">
-            <div className="relative w-full max-w-lg aspect-square border-[4px] border-black rounded-full overflow-hidden bg-[#FF6B6B] shadow-[-8px_8px_0px_0px_rgba(0,0,0,1)]">
+      <section className="container mx-auto px-4 py-12 md:py-16">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+          <div className="flex justify-center order-1 md:order-1">
+            <div className="relative w-full max-w-[280px] sm:max-w-sm md:max-w-lg aspect-square border-[3px] md:border-[4px] border-black rounded-full overflow-hidden bg-[#FF6B6B] shadow-[-6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[-8px_8px_0px_0px_rgba(0,0,0,1)]">
               <Image src="/images/about-me.svg" alt="Profile illustration" fill className="object-cover" />
             </div>
           </div>
 
-          <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold">{t("about.sectionTitle")}</h2>
-            <p className="text-gray-600 text-base md:text-lg leading-relaxed">{t("about.description1")}</p>
-            <p className="text-gray-600 text-base md:text-lg leading-relaxed">{t("about.description2")}</p>
+          <div className="space-y-4 md:space-y-6 order-2 md:order-2">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">{t("about.sectionTitle")}</h2>
+            <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">{t("about.description1")}</p>
+            <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">{t("about.description2")}</p>
           </div>
         </div>
       </section>
 
       {/* Skills & Stats Section */}
-      <section className="container mx-auto px-4 py-16 bg-[#F8F9FA]">
+      <section className="container mx-auto px-4 py-12 md:py-16 bg-[#F8F9FA]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">{t("about.skillsTitle")}</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">
+            {t("about.skillsTitle")}
+          </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-              <div className="w-12 h-12 bg-[#2F81F7] border-2 border-black rounded-lg flex items-center justify-center mb-4">
-                <Code className="w-6 h-6 text-white" />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            <div className="bg-white border-3 md:border-4 border-black p-5 md:p-6 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-[#2F81F7] border-2 border-black rounded-lg flex items-center justify-center mb-3 md:mb-4">
+                <Code className="w-5 h-5 md:w-6 md:h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">{t("about.frontend")}</h3>
-              <p className="text-gray-600 text-sm">{t("about.frontendDesc")}</p>
+              <h3 className="text-lg md:text-xl font-bold mb-2">{t("about.frontend")}</h3>
+              <p className="text-gray-600 text-xs md:text-sm">{t("about.frontendDesc")}</p>
             </div>
 
-            <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-              <div className="w-12 h-12 bg-[#FF6B6B] border-2 border-black rounded-lg flex items-center justify-center mb-4">
-                <Briefcase className="w-6 h-6 text-white" />
+            <div className="bg-white border-3 md:border-4 border-black p-5 md:p-6 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FF6B6B] border-2 border-black rounded-lg flex items-center justify-center mb-3 md:mb-4">
+                <Briefcase className="w-5 h-5 md:w-6 md:h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">{t("about.backend")}</h3>
-              <p className="text-gray-600 text-sm">{t("about.backendDesc")}</p>
+              <h3 className="text-lg md:text-xl font-bold mb-2">{t("about.backend")}</h3>
+              <p className="text-gray-600 text-xs md:text-sm">{t("about.backendDesc")}</p>
             </div>
 
-            <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-              <div className="w-12 h-12 bg-[#6366F1] border-2 border-black rounded-lg flex items-center justify-center mb-4">
-                <Award className="w-6 h-6 text-white" />
+            <div className="bg-white border-3 md:border-4 border-black p-5 md:p-6 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-[#6366F1] border-2 border-black rounded-lg flex items-center justify-center mb-3 md:mb-4">
+                <Award className="w-5 h-5 md:w-6 md:h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">{t("about.devops")}</h3>
-              <p className="text-gray-600 text-sm">{t("about.devopsDesc")}</p>
+              <h3 className="text-lg md:text-xl font-bold mb-2">{t("about.devops")}</h3>
+              <p className="text-gray-600 text-xs md:text-sm">{t("about.devopsDesc")}</p>
             </div>
 
-            <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-              <div className="w-12 h-12 bg-[#FFD93D] border-2 border-black rounded-lg flex items-center justify-center mb-4">
-                <User className="w-6 h-6 text-black" />
+            <div className="bg-white border-3 md:border-4 border-black p-5 md:p-6 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)] md:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+              <div className="w-10 h-10 md:w-12 md:h-12 bg-[#FFD93D] border-2 border-black rounded-lg flex items-center justify-center mb-3 md:mb-4">
+                <User className="w-5 h-5 md:w-6 md:h-6 text-black" />
               </div>
-              <h3 className="text-xl font-bold mb-2">{t("about.softskills")}</h3>
-              <p className="text-gray-600 text-sm">{t("about.softskillsDesc")}</p>
+              <h3 className="text-lg md:text-xl font-bold mb-2">{t("about.softskills")}</h3>
+              <p className="text-gray-600 text-xs md:text-sm">{t("about.softskillsDesc")}</p>
             </div>
           </div>
         </div>

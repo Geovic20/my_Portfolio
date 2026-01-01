@@ -40,7 +40,7 @@ const testimonials = [
       fr: "Chef de Projet chez Digital Agency",
       en: "Project Manager at Digital Agency",
     },
-    image: "/images/633b277fc2e3697bb14c6a4f-frances.png",
+    image: "/images/633b1c81e34cfb82b85454eb-quote-s.png",
   },
 ]
 
@@ -66,22 +66,26 @@ export function TestimonialsSection() {
   const currentTestimonial = testimonials[currentIndex]
 
   return (
-    <section className="container mx-auto px-4 py-16 md:py-24">
+    <section className="container mx-auto px-4 py-12 md:py-16 lg:py-24">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12 pt-4 md:pt-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-[1.3]">
+        <div className="text-center mb-8 md:mb-12 pt-4 md:pt-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 leading-[1.3] px-4">
             {t("testimonials.title")}
             <br />
             {t("testimonials.about")}{" "}
-            <span className="bg-[#2F81F7] text-white px-3 py-1 inline-block">{t("testimonials.work")}</span>
+            <span className="bg-[#2F81F7] text-white px-2 py-1 md:px-3 md:py-1 inline-block">
+              {t("testimonials.work")}
+            </span>
           </h2>
-          <p className="text-gray-600 text-base md:text-lg max-w-2xl mx-auto pb-8">{t("testimonials.subtitle")}</p>
+          <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto pb-6 md:pb-8 px-4">
+            {t("testimonials.subtitle")}
+          </p>
         </div>
 
         <div className="relative max-w-5xl mx-auto">
           <div className="relative">
-            <div className="bg-white border-4 border-black rounded-3xl py-8 md:py-14 px-6 md:px-8 md:pr-72 lg:pr-72 transition-opacity duration-300">
-              <div className="absolute -top-6 md:-top-8 left-6 md:left-8 w-12 h-12 md:w-16 md:h-16">
+            <div className="bg-white border-4 border-black rounded-2xl md:rounded-3xl py-6 sm:py-8 md:py-14 px-5 sm:px-6 md:px-8 transition-opacity duration-300">
+              <div className="absolute -top-5 sm:-top-6 md:-top-8 left-5 sm:left-6 md:left-8 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16">
                 <Image
                   src="/images/633b1c81e34cfb82b85454eb-quote-s.png"
                   alt="Quote"
@@ -92,18 +96,20 @@ export function TestimonialsSection() {
               </div>
 
               <div className="md:max-w-[65%]">
-                <p className="text-sm md:text-base lg:text-lg mb-6 leading-relaxed">
+                <p className="text-sm sm:text-base md:text-lg lg:text-lg mb-4 sm:mb-5 md:mb-6 leading-relaxed">
                   {currentTestimonial.quote[language]}
                 </p>
 
                 <div>
-                  <div className="font-bold text-base md:text-lg">{currentTestimonial.name}</div>
-                  <div className="text-gray-600 text-sm md:text-base">{currentTestimonial.title[language]}</div>
+                  <div className="font-bold text-sm sm:text-base md:text-lg">{currentTestimonial.name}</div>
+                  <div className="text-gray-600 text-xs sm:text-sm md:text-base">
+                    {currentTestimonial.title[language]}
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-[440px] h-[440px] rounded-full overflow-hidden hidden lg:block">
+            <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-[440px] h-[440px] rounded-full overflow-hidden hidden xl:block">
               <Image
                 src={currentTestimonial.image || "/placeholder.svg"}
                 alt="Client testimonial"
@@ -113,13 +119,13 @@ export function TestimonialsSection() {
             </div>
           </div>
 
-          <div className="flex items-center justify-center gap-4 mt-8">
+          <div className="flex items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
             <button
               onClick={goToPrevious}
-              className="w-12 h-12 rounded-full bg-white border-4 border-black flex items-center justify-center hover:bg-gray-100 transition-colors"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border-3 sm:border-4 border-black flex items-center justify-center hover:bg-gray-100 transition-colors active:scale-95"
               aria-label="Previous testimonial"
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
 
             <div className="flex gap-2">
@@ -127,7 +133,7 @@ export function TestimonialsSection() {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
+                  className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-colors ${
                     index === currentIndex ? "bg-[#2F81F7]" : "bg-gray-300"
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
@@ -137,10 +143,10 @@ export function TestimonialsSection() {
 
             <button
               onClick={goToNext}
-              className="w-12 h-12 rounded-full bg-white border-4 border-black flex items-center justify-center hover:bg-gray-100 transition-colors"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border-3 sm:border-4 border-black flex items-center justify-center hover:bg-gray-100 transition-colors active:scale-95"
               aria-label="Next testimonial"
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
           </div>
         </div>

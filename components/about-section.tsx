@@ -13,7 +13,7 @@ export function AboutSection() {
     <section className="container mx-auto px-4 py-16 md:py-32">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
         <div className="flex justify-center">
-          <div className="relative w-full max-w-lg aspect-square border-[4px] border-black rounded-full overflow-hidden bg-[#FF6B6B] shadow-[-8px_8px_0px_0px_rgba(0,0,0,1)]">
+          <div className="relative w-full max-w-lg aspect-square border-4 border-black rounded-full overflow-hidden bg-[#FF6B6B] shadow-[-8px_8px_0px_0px_rgba(0,0,0,1)]">
             <Image src="/images/about-me.svg" alt="About me illustration" fill className="object-cover" />
           </div>
         </div>
@@ -29,7 +29,7 @@ export function AboutSection() {
 
           <div className="space-y-6">
             <div className="flex gap-4 items-start">
-              <div className="w-5 h-5 bg-[#6366F1] border-2 border-black rounded-[5px] flex-shrink-0 mt-1"></div>
+              <div className="w-5 h-5 bg-[#6366F1] border-2 border-black rounded-[5px] shrink-0 mt-1"></div>
               <div>
                 <h3 className="text-lg md:text-xl font-bold mb-2">{t("aboutSection.experience")}</h3>
                 <p className="text-gray-600 text-sm md:text-base">{t("aboutSection.experienceDesc")}</p>
@@ -37,7 +37,7 @@ export function AboutSection() {
             </div>
 
             <div className="flex gap-4 items-start">
-              <div className="w-5 h-5 bg-[#FF6B7A] border-2 border-black rounded-[5px] flex-shrink-0 mt-1"></div>
+              <div className="w-5 h-5 bg-[#FF6B7A] border-2 border-black rounded-[5px] shrink-0 mt-1"></div>
               <div>
                 <h3 className="text-lg md:text-xl font-bold mb-2">{t("aboutSection.projects")}</h3>
                 <p className="text-gray-600 text-sm md:text-base">{t("aboutSection.projectsDesc")}</p>
@@ -46,7 +46,7 @@ export function AboutSection() {
           </div>
 
           <Link href="/about">
-            <Button className="bg-[#0B0B0B] text-white hover:bg-black/90 rounded-lg py-5 px-8 md:py-[22px] md:px-[62px] text-base md:text-lg font-semibold h-auto w-full sm:w-auto sm:min-w-[240px]">
+            <Button className="bg-[#0B0B0B] text-white hover:bg-black/90 rounded-lg py-5 px-8 md:py-5.5 md:px-15.5 text-base md:text-lg font-semibold h-auto w-full sm:w-auto sm:min-w-60">
               <User className="w-5 h-5" />
               {t("aboutSection.cta")}
             </Button>

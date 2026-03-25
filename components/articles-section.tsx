@@ -21,7 +21,7 @@ export function ArticlesSection() {
         <div className="grid md:grid-cols-[0.9fr_1.1fr] gap-6 mb-16">
           {/* Large featured article card */}
           <div className="group bg-white border-[3px] border-black rounded-3xl overflow-hidden hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-300">
-            <div className="bg-[#EDEDED] relative min-h-[220px] md:min-h-[320px] m-3 md:m-4 rounded-2xl overflow-hidden">
+            <div className="bg-[#EDEDED] relative min-h-55 md:min-h-80 m-3 md:m-4 rounded-2xl overflow-hidden">
               <span className="absolute top-3 right-3 md:top-4 md:right-4 inline-block bg-black text-white text-xs md:text-sm font-semibold px-3 py-1.5 md:px-4 md:py-2 rounded-lg z-10">
                 Resources
               </span>
@@ -37,7 +37,7 @@ export function ArticlesSection() {
                 What is the right design tool to choose in 2023?
               </h3>
               <div className="flex items-center gap-3 md:gap-4">
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-[#FDB927] border-2 border-black rounded-full overflow-hidden flex-shrink-0">
+                <div className="w-12 h-12 md:w-16 md:h-16 bg-[#FDB927] border-2 border-black rounded-full overflow-hidden shrink-0">
                   <Image
                     src="/images/design-mode/63407fbdc2d4ac5270385fd4_home-he.png"
                     alt="KPOSSILANDE Géovic"
@@ -60,7 +60,7 @@ export function ArticlesSection() {
             <div className="group bg-white border-[3px] border-black rounded-3xl overflow-hidden hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-300">
               <div className="flex flex-col sm:flex-row">
                 {/* Image area */}
-                <div className="bg-[#EDEDED] min-w-full sm:min-w-[200px] md:min-w-[280px] min-h-[180px] sm:min-h-[200px] relative m-0 sm:m-3 md:m-4 rounded-none sm:rounded-2xl overflow-hidden flex-shrink-0">
+                <div className="bg-[#EDEDED] min-w-full sm:min-w-50 md:min-w-70 min-h-45 sm:min-h-50 relative m-0 sm:m-3 md:m-4 rounded-none sm:rounded-2xl overflow-hidden shrink-0">
                   <span className="absolute top-3 right-3 md:top-4 md:right-4 inline-block bg-black text-white text-xs font-semibold px-3 py-1.5 rounded-lg z-10">
                     Articles
                   </span>
@@ -87,7 +87,7 @@ export function ArticlesSection() {
             <div className="group bg-white border-[3px] border-black rounded-3xl overflow-hidden hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-300">
               <div className="flex flex-col sm:flex-row">
                 {/* Image area */}
-                <div className="bg-[#EDEDED] min-w-full sm:min-w-[200px] md:min-w-[280px] min-h-[180px] sm:min-h-[200px] relative m-0 sm:m-3 md:m-4 rounded-none sm:rounded-2xl overflow-hidden flex-shrink-0">
+                <div className="bg-[#EDEDED] min-w-full sm:min-w-50 md:min-w-70 min-h-45 sm:min-h-50 relative m-0 sm:m-3 md:m-4 rounded-none sm:rounded-2xl overflow-hidden shrink-0">
                   <span className="absolute top-3 right-3 md:top-4 md:right-4 inline-block bg-black text-white text-xs font-semibold px-3 py-1.5 rounded-lg z-10">
                     News
                   </span>

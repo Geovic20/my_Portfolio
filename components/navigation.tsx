@@ -13,7 +13,7 @@ export function Navigation() {
   return (
     <div className="container mx-auto px-4 pt-4 md:pt-8 pb-4">
       <nav className="flex items-center justify-between bg-background border-4 border-black rounded-xl px-4 md:px-5 py-3 max-w-2xl mx-auto shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-        <Link href="/" className="w-10 h-10 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+        <Link href="/" className="w-10 h-10 bg-black rounded-full flex items-center justify-center shrink-0">
           <div className="w-6 h-6 bg-white rounded-full"></div>
         </Link>
 
@@ -21,19 +21,19 @@ export function Navigation() {
         <div className="hidden md:flex items-center gap-4 lg:gap-6 flex-1 justify-center">
           <Link
             href="/"
-            className="text-base lg:text-[18px] font-bold leading-[20px] hover:opacity-70 transition-opacity"
+            className="text-base lg:text-[18px] font-bold leading-5 hover:opacity-70 transition-opacity"
           >
             {t("nav.home")}
           </Link>
           <Link
             href="/about"
-            className="text-base lg:text-[18px] font-bold leading-[20px] hover:opacity-70 transition-opacity"
+            className="text-base lg:text-[18px] font-bold leading-5 hover:opacity-70 transition-opacity"
           >
             {t("nav.about")}
           </Link>
           <Link
             href="/portfolio"
-            className="text-base lg:text-[18px] font-bold leading-[20px] hover:opacity-70 transition-opacity"
+            className="text-base lg:text-[18px] font-bold leading-5 hover:opacity-70 transition-opacity"
           >
             {t("nav.portfolio")}
           </Link>
@@ -49,17 +49,17 @@ export function Navigation() {
         </button>
 
         {/* Desktop Actions */}
-        <div className="hidden md:flex items-center gap-2 flex-shrink-0">
+        <div className="hidden md:flex items-center gap-2 shrink-0">
           <Button
             onClick={() => setLanguage(language === "fr" ? "en" : "fr")}
             variant="outline"
-            className="border-2 border-black hover:bg-black hover:text-white rounded-sm px-3 lg:px-4 h-10 lg:h-12 min-w-[44px]"
+            className="border-2 border-black hover:bg-black hover:text-white rounded-sm px-3 lg:px-4 h-10 lg:h-12 min-w-11"
           >
             <Languages className="w-5 h-5 mr-1 lg:mr-2" />
             <span className="font-bold text-sm">{language === "fr" ? "EN" : "FR"}</span>
           </Button>
           <Link href="/contact">
-            <Button className="bg-black text-white hover:bg-black/90 rounded-sm px-4 lg:px-5 h-10 lg:h-12 min-w-[44px]">
+            <Button className="bg-black text-white hover:bg-black/90 rounded-sm px-4 lg:px-5 h-10 lg:h-12 min-w-11">
               <Mail className="w-5 h-5 lg:w-6 lg:h-6" strokeWidth={2.5} />
             </Button>
           </Link>

@@ -94,7 +94,7 @@ export function ServicesSection() {
               <p className="text-[16px] sm:text-[17px] md:text-[18px] leading-[26px] sm:leading-[28px] md:leading-[30px] font-medium text-[#393939] mb-6 sm:mb-8">
                 {t("services.ctaDesc")}
               </p>
-              <Button className="bg-black text-white hover:bg-black/90 rounded-[16px] px-8 sm:px-12 py-5 sm:py-6 font-medium text-[16px] sm:text-[18px] w-full max-w-[300px] sm:max-w-[340px] h-[56px] sm:h-[64px]">
+              <Button className="bg-black text-white hover:bg-black/90 rounded-2xl px-8 sm:px-12 py-5 sm:py-6 font-medium text-[16px] sm:text-[18px] w-full max-w-[300px] sm:max-w-[340px] h-[56px] sm:h-[64px]">
                 <Mail className="w-5 h-5 mr-2" />
                 {t("services.ctaButton")}
               </Button>

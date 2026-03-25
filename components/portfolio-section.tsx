@@ -10,20 +10,18 @@ export function PortfolioSection() {
 
   const projects = [
     {
+      id: "1",
       title: t("portfolioPreview.project1Title"),
       description: t("portfolioPreview.project1Desc"),
       tag: "Full Stack",
-      logo: "/images/studio-logo.svg",
-      bgColor: "bg-[#6366F1]",
-      illustration: "/images/studio-workspace.svg",
+      image: "/modern-ecommerce-interface.png",
     },
     {
+      id: "2",
       title: t("portfolioPreview.project2Title"),
       description: t("portfolioPreview.project2Desc"),
       tag: "Web App",
-      logo: "/images/venture-logo.svg",
-      bgColor: "bg-[#2F81F7]",
-      illustration: "/images/venture-workspace.svg",
+      image: "/project-management-dashboard.png",
     },
   ]
 
@@ -46,16 +44,6 @@ export function PortfolioSection() {
               className="group grid md:grid-cols-2 bg-white border-[3px] border-black rounded-[32px] overflow-hidden hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all"
             >
               <div className="p-6 md:p-12 flex flex-col justify-center bg-white">
-                <div className="flex items-center gap-3 mb-6">
-                  <Image
-                    src={project.logo || "/placeholder.svg"}
-                    alt={`${project.title} logo`}
-                    width={120}
-                    height={32}
-                    className="h-6 md:h-8 w-auto"
-                  />
-                </div>
-
                 <span className="inline-block bg-black text-white text-xs font-semibold px-4 py-1.5 rounded-full mb-6 w-fit">
                   {project.tag}
                 </span>
@@ -68,18 +56,18 @@ export function PortfolioSection() {
                   {project.description}
                 </p>
 
-                <a
-                  href="#"
+                <Link
+                  href={`/portfolio/case-study/${project.id}`}
                   className="flex items-center gap-2 font-semibold text-[#0B0B0B] hover:gap-3 transition-all text-sm md:text-base"
                 >
                   {t("portfolioPreview.caseStudy")}
                   <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
               </div>
 
-              <div className={`${project.bgColor} relative overflow-hidden min-h-[250px] md:min-h-[500px]`}>
+              <div className="relative overflow-hidden min-h-[250px] md:min-h-[500px]">
                 <Image
-                  src={project.illustration || "/placeholder.svg"}
+                  src={project.image}
                   alt={project.title}
                   fill
                   className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"

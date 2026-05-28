@@ -41,18 +41,18 @@ export function PortfolioSection() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group grid md:grid-cols-2 bg-white border-[3px] border-black rounded-[32px] overflow-hidden hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all"
+              className="group grid md:grid-cols-2 bg-white border-[3px] border-black rounded-4xl overflow-hidden hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all"
             >
               <div className="p-6 md:p-12 flex flex-col justify-center bg-white">
                 <span className="inline-block bg-black text-white text-xs font-semibold px-4 py-1.5 rounded-full mb-6 w-fit">
                   {project.tag}
                 </span>
 
-                <h3 className="text-xl md:text-[28px] font-bold mb-4 leading-tight md:leading-[40px] text-[#0B0B0B]">
+                <h3 className="text-xl md:text-[28px] font-bold mb-4 leading-tight md:leading-10 text-[#0B0B0B]">
                   {project.title}
                 </h3>
 
-                <p className="text-base md:text-[18px] text-[#393939] mb-8 leading-relaxed md:leading-[30px] font-medium">
+                <p className="text-base md:text-[18px] text-[#393939] mb-8 leading-relaxed md:leading-7.5 font-medium">
                   {project.description}
                 </p>
 
@@ -65,7 +65,7 @@ export function PortfolioSection() {
                 </Link>
               </div>
 
-              <div className="relative overflow-hidden min-h-[250px] md:min-h-[500px]">
+              <div className="relative overflow-hidden min-h-62.5 md:min-h-125">
                 <Image
                   src={project.image}
                   alt={project.title}

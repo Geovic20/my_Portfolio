@@ -109,7 +109,7 @@ export function TestimonialsSection() {
               </div>
             </div>
 
-            <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-[440px] h-[440px] rounded-full overflow-hidden hidden xl:block">
+            <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-110 h-110 rounded-full overflow-hidden hidden xl:block">
               <Image
                 src={currentTestimonial.image || "/placeholder.svg"}
                 alt="Client testimonial"

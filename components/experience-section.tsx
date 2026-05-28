@@ -59,7 +59,7 @@ export function ExperienceSection() {
             </p>
             <Button
               onClick={handleDownloadCV}
-              className="bg-white text-black hover:bg-gray-50 rounded-lg py-5 px-8 md:py-[22px] md:px-[62px] text-base md:text-lg font-semibold h-auto w-full sm:w-auto sm:min-w-[240px]"
+              className="bg-white text-black hover:bg-gray-50 rounded-lg py-5 px-8 md:py-5.5 md:px-15.5 text-base md:text-lg font-semibold h-auto w-full sm:w-auto sm:min-w-60"
             >
               <FileText className="w-5 h-5" />
               {t("experience.cta")}
@@ -68,9 +68,9 @@ export function ExperienceSection() {
 
           <div className="space-y-6">
             {experiences.map((exp, index) => (
-              <div key={index} className="bg-white border-4 border-black rounded-3xl min-h-[220px] md:min-h-[240px]">
+              <div key={index} className="bg-white border-4 border-black rounded-3xl min-h-55 md:min-h-60">
                 <div className="flex items-center justify-between mb-4 md:mb-6 pt-6 md:pt-8 px-6 md:px-8">
-                  <div className="text-base md:text-[22px] leading-tight md:leading-[34px] font-bold text-[#0B0B0B]">
+                  <div className="text-base md:text-[22px] leading-tight md:leading-8.5 font-bold text-[#0B0B0B]">
                     {exp.period}
                   </div>
                   <div className="rounded-full border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
@@ -79,7 +79,7 @@ export function ExperienceSection() {
                       alt={exp.title}
                       width={48}
                       height={48}
-                      className="w-10 h-10 md:w-12 md:h-12 flex-shrink-0 rounded-full"
+                      className="w-10 h-10 md:w-12 md:h-12 shrink-0 rounded-full"
                     />
                   </div>
                 </div>
@@ -87,10 +87,10 @@ export function ExperienceSection() {
                 <div className="border-t-[3px] border-black mb-4 md:mb-6"></div>
 
                 <div className="px-6 md:px-8 pb-6 md:pb-8">
-                  <h3 className="text-xl md:text-[28px] leading-tight md:leading-[40px] font-bold text-[#0B0B0B] mb-2 md:mb-3">
+                  <h3 className="text-xl md:text-[28px] leading-tight md:leading-10 font-bold text-[#0B0B0B] mb-2 md:mb-3">
                     {exp.title}
                   </h3>
-                  <p className="text-[#393939] text-base md:text-[20px] leading-relaxed md:leading-[32px]">
+                  <p className="text-[#393939] text-base md:text-[20px] leading-relaxed md:leading-8">
                     {exp.description}
                   </p>
                 </div>

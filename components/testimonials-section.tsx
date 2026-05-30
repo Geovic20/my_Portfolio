@@ -122,7 +122,7 @@ export function TestimonialsSection() {
           <div className="flex items-center justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
             <button
               onClick={goToPrevious}
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border-3 sm:border-4 border-black flex items-center justify-center hover:bg-gray-100 transition-colors active:scale-95"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border-3 sm:border-4 border-black flex items-center justify-center hover:bg-gray-100 transition-colors active:scale-95 cursor-pointer"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -133,7 +133,7 @@ export function TestimonialsSection() {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-colors ${
+                  className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-colors cursor-pointer ${
                     index === currentIndex ? "bg-[#2F81F7]" : "bg-gray-300"
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
@@ -143,7 +143,7 @@ export function TestimonialsSection() {
 
             <button
               onClick={goToNext}
-              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border-3 sm:border-4 border-black flex items-center justify-center hover:bg-gray-100 transition-colors active:scale-95"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border-3 sm:border-4 border-black flex items-center justify-center hover:bg-gray-100 transition-colors active:scale-95 cursor-pointer"
               aria-label="Next testimonial"
             >
               <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />

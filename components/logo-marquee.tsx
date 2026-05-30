@@ -173,6 +173,7 @@ const OrbitingSkill = memo(({ config, angle }: OrbitingSkillProps) => {
 
   return (
     <div
+      suppressHydrationWarning
       className="absolute top-1/2 left-1/2 transition-all duration-300 ease-out"
       style={{
         width: `${size}px`,
@@ -184,6 +185,7 @@ const OrbitingSkill = memo(({ config, angle }: OrbitingSkillProps) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div
+        suppressHydrationWarning
         className={`
           relative w-full h-full p-2 bg-gray-800/90 backdrop-blur-sm
           rounded-full flex items-center justify-center
@@ -300,13 +302,13 @@ export function LogoMarquee() {
       </div>
 
       <div 
-        className="relative w-[calc(100vw-40px)] h-[calc(100vw-40px)] md:w-[450px] md:h-[450px] flex items-center justify-center"
+        className="relative w-[calc(100vw-40px)] h-[calc(100vw-40px)] md:w-112.5 md:h-112.5 flex items-center justify-center"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
         
         {/* Central "Code" Icon with enhanced glow */}
-        <div className="w-20 h-20 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center z-10 relative shadow-2xl">
+        <div className="w-20 h-20 bg-linear-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center z-10 relative shadow-2xl">
           <div className="absolute inset-0 rounded-full bg-cyan-500/30 blur-xl animate-pulse"></div>
           <div className="absolute inset-0 rounded-full bg-purple-500/20 blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
           <div className="relative z-10">

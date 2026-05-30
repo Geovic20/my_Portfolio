@@ -45,18 +45,13 @@ const iconComponents: Record<IconType, { component: () => React.JSX.Element; col
   },
   django: {
     component: () => (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-        <path d="M2 0h8v12H2V0zm8-2h6v14h-6V-2zm8 2h6v12h-6V0z" fill="#092E20"/>
-        <path d="M12 12c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 30.627 0 24 5.373 12 12 12z" fill="#092E20" opacity="0.5"/>
-      </svg>
+      <img src="/django-logo.png" alt="Django" className="w-full h-full object-contain" />
     ),
     color: '#092E20'
   },
   docker: {
     component: () => (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-        <path d="M13.983 11.078h2.119a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.119a.185.185 0 0 0-.185.186v1.888c0 .102.083.185.185.185m-2.954-5.4h2.118a.186.186 0 0 0 .186-.186V3.608a.186.186 0 0 0-.186-.186h-2.118a.185.185 0 0 0-.186.186v1.884c0 .102.084.185.186.185m0 2.7h2.118a.186.186 0 0 0 .186-.186V6.31a.186.186 0 0 0-.186-.186h-2.118a.185.185 0 0 0-.186.186v1.884c0 .102.084.185.186.185m-2.952 0h2.119a.186.186 0 0 0 .186-.186V6.31a.186.186 0 0 0-.186-.186h-2.119a.185.185 0 0 0-.185.186v1.884c0 .102.083.185.185.185m-2.953 0h2.118a.186.186 0 0 0 .186-.186V6.31a.186.186 0 0 0-.186-.186H5.124a.185.185 0 0 0-.186.186v1.884c0 .102.084.185.186.185m5.928 2.697h2.118a.186.186 0 0 0 .186-.186V9.006a.186.186 0 0 0-.186-.186h-2.118a.185.185 0 0 0-.186.186v1.888c0 .102.084.185.186.185" fill="#2496ED"/>
-      </svg>
+      <img src="/docker-logo.png" alt="Docker" className="w-full h-full object-contain" />
     ),
     color: '#2496ED'
   },
@@ -71,10 +66,7 @@ const iconComponents: Record<IconType, { component: () => React.JSX.Element; col
   },
   java: {
     component: () => (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-        <path d="M8.851 13.75s-1.578 .918-.356 1.226c1.433.374 2.156.322 3.733-.365 0 0 .414.259 1.008.484-3.57 1.532-8.086-.883-4.385-1.345zm-.767-3.758s-1.77 1.312-.31 1.592c1.911.365 3.409.354 6.015-.486 0 0 .289.293.746.453-5.328 1.557-11.25-.821-6.451-1.559zM19.434 21.457c0 0 .921.759-1.013 1.348-3.617.943-15.05.625-18.228-.341-1.035-.658.912-1.572 1.528-1.762 .635-.201 .996-.165 .996-.165 1.189-.834 7.254 1.286 14.717.92z" fill="#ED8936"/>
-        <path d="M11.286 8.75s.679-1.217-.358-2.177c-1.37-1.278-3.11-.916-4.884 1.058-2.262 2.515-1.296 4.95 1.273 4.95 2.657 0 3.969-1.631 3.969-3.831zm-7.306 9.08s-.563.46.388 1.387c3.232 3.326 11.875 4.394 15.625 1.521.949-.772-.261-1.862-1.169-1.725-.837.112-.937.631-2.007 1.496-3.437 2.782-12.671 2.344-12.837-.279z" fill="#ED8936"/>
-      </svg>
+      <img src="/java-logo.png" alt="Java" className="w-full h-full object-contain" />
     ),
     color: '#ED8936'
   },
@@ -88,12 +80,9 @@ const iconComponents: Record<IconType, { component: () => React.JSX.Element; col
   },
   c: {
     component: () => (
-      <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#A8B9CC"/>
-        <path d="M8.5 12c0 1.93 1.57 3.5 3.5 3.5s3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5-3.5 1.57-3.5 3.5z" fill="#A8B9CC"/>
-      </svg>
+      <img src="/c-logo.png" alt="C" className="w-full h-full object-contain" />
     ),
-    color: '#A8B9CC'
+    color: '#00599C'
   },
   cpp: {
     component: () => (

@@ -23,13 +23,13 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-7 pt-2 md:pt-4">
-            <Link href="/contact" className="w-full sm:w-auto">
+            <Link href="/contact" className="w-full sm:w-auto cursor-pointer">
               <Button className="w-full sm:w-auto bg-[#0B0B0B] text-white hover:bg-black/90 rounded-lg py-4 px-6 sm:py-5 sm:px-8 md:py-5.5 md:px-15.5 text-base md:text-lg font-semibold h-auto min-h-12 sm:min-w-50 md:min-w-60">
                 <Mail className="w-5 h-5 mr-2" />
                 {t("hero.cta1")}
               </Button>
             </Link>
-            <Link href="/portfolio" className="w-full sm:w-auto">
+            <Link href="/portfolio" className="w-full sm:w-auto cursor-pointer">
               <Button
                 variant="outline"
                 className="w-full sm:w-auto bg-white border-[3px] border-black hover:bg-gray-50 rounded-lg py-4 px-6 sm:py-5 sm:px-8 md:py-5.5 md:px-15.5 text-base md:text-lg font-semibold h-auto min-h-12 sm:min-w-50 md:min-w-60"

@@ -45,7 +45,7 @@ export function AboutSection() {
             </div>
           </div>
 
-          <Link href="/about">
+          <Link href="/about" className="cursor-pointer">
             <Button className="bg-[#0B0B0B] text-white hover:bg-black/90 rounded-lg py-5 px-8 md:py-5.5 md:px-15.5 text-base md:text-lg font-semibold h-auto w-full sm:w-auto sm:min-w-60">
               <User className="w-5 h-5" />
               {t("aboutSection.cta")}

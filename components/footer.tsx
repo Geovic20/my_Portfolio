@@ -18,7 +18,7 @@ export function Footer() {
                   href="https://www.linkedin.com/in/g%C3%A9ovic-kpossilande-1b0367292/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-[#2F81F7] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+                  className="w-10 h-10 bg-[#2F81F7] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity cursor-pointer"
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
@@ -26,7 +26,7 @@ export function Footer() {
                   href="https://github.com/Geovic20"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-[#333] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+                  className="w-10 h-10 bg-[#333] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity cursor-pointer"
                 >
                   <Github className="w-5 h-5" />
                 </a>
@@ -34,7 +34,7 @@ export function Footer() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-[#FF6B7A] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity"
+                  className="w-10 h-10 bg-[#FF6B7A] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity cursor-pointer"
                 >
                   <Instagram className="w-5 h-5" />
                 </a>
@@ -46,22 +46,22 @@ export function Footer() {
               <h3 className="font-bold mb-4">Navigation</h3>
               <ul className="space-y-2 text-gray-400 text-sm">
                 <li>
-                  <Link href="/" className="hover:text-white transition-colors">
+                  <Link href="/" className="hover:text-white transition-colors cursor-pointer">
                     Accueil
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about" className="hover:text-white transition-colors">
+                  <Link href="/about" className="hover:text-white transition-colors cursor-pointer">
                     À propos
                   </Link>
                 </li>
                 <li>
-                  <Link href="/portfolio" className="hover:text-white transition-colors">
+                  <Link href="/portfolio" className="hover:text-white transition-colors cursor-pointer">
                     Portfolio
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="hover:text-white transition-colors">
+                  <Link href="/contact" className="hover:text-white transition-colors cursor-pointer">
                     Contact
                   </Link>
                 </li>
@@ -74,13 +74,13 @@ export function Footer() {
               <ul className="space-y-3 text-gray-400 text-sm">
                 <li className="flex items-center gap-2">
                   <Mail className="w-4 h-4 shrink-0" />
-                  <a href="mailto:kpossilandegeovic68@gmail.com" className="hover:text-white transition-colors break-all">
+                  <a href="mailto:kpossilandegeovic68@gmail.com" className="hover:text-white transition-colors break-all cursor-pointer">
                     kpossilandegeovic68@gmail.com
                   </a>
                 </li>
                 <li className="flex items-center gap-2">
                   <Phone className="w-4 h-4 shrink-0" />
-                  <a href="tel:+2290190835005" className="hover:text-white transition-colors">
+                  <a href="tel:+2290190835005" className="hover:text-white transition-colors cursor-pointer">
                     +229 01 90 83 50 05
                   </a>
                 </li>

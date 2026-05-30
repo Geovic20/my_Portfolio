@@ -58,7 +58,7 @@ export function PortfolioSection() {
 
                 <Link
                   href={`/portfolio/case-study/${project.id}`}
-                  className="flex items-center gap-2 font-semibold text-[#0B0B0B] hover:gap-3 transition-all text-sm md:text-base"
+                  className="flex items-center gap-2 font-semibold text-[#0B0B0B] hover:gap-3 transition-all text-sm md:text-base cursor-pointer"
                 >
                   {t("portfolioPreview.caseStudy")}
                   <ArrowRight className="w-4 h-4" />
@@ -78,8 +78,8 @@ export function PortfolioSection() {
         </div>
 
         <div className="flex justify-center">
-          <Link href="/portfolio">
-            <button className="bg-black text-white px-6 md:px-8 py-4 md:py-5 rounded-[12px] font-semibold hover:bg-gray-900 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-sm md:text-base">
+          <Link href="/portfolio" className="cursor-pointer">
+            <button className="bg-black text-white px-6 md:px-8 py-4 md:py-5 rounded-[12px] font-semibold hover:bg-gray-900 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-sm md:text-base cursor-pointer">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"

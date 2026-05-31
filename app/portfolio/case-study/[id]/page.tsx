@@ -186,7 +186,7 @@ export default function CaseStudyPage() {
           </div>
 
           {/* Project Image */}
-          <div className="relative w-full h-[300px] md:h-[500px] border-4 border-black rounded-2xl overflow-hidden shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+          <div className="relative w-full h-75 md:h-125 border-4 border-black rounded-2xl overflow-hidden shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
             <Image src={study.image} alt={title} fill className="object-cover" />
           </div>
         </div>
@@ -217,7 +217,7 @@ export default function CaseStudyPage() {
           <div className="space-y-4">
             {challenges.map((challenge, index) => (
               <div key={index} className="flex items-start gap-4 p-4 bg-red-50 border-2 border-black rounded-lg">
-                <span className="flex-shrink-0 w-8 h-8 bg-red-500 text-white font-bold flex items-center justify-center rounded-full">
+                <span className="shrink-0 w-8 h-8 bg-red-500 text-white font-bold flex items-center justify-center rounded-full">
                   {index + 1}
                 </span>
                 <p className="text-gray-700">{challenge}</p>
@@ -236,7 +236,7 @@ export default function CaseStudyPage() {
           <div className="space-y-4">
             {solutions.map((solution, index) => (
               <div key={index} className="flex items-start gap-4 p-4 bg-blue-50 border-2 border-black rounded-lg">
-                <span className="flex-shrink-0 w-8 h-8 bg-blue-500 text-white font-bold flex items-center justify-center rounded-full">
+                <span className="shrink-0 w-8 h-8 bg-blue-500 text-white font-bold flex items-center justify-center rounded-full">
                   {index + 1}
                 </span>
                 <p className="text-gray-700">{solution}</p>

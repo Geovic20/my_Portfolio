@@ -2,7 +2,6 @@ import type React from "react"
 import type { Metadata } from "next"
 
 import "./globals.css"
-
 import { Onest, Geist_Mono as V0_Font_Geist_Mono } from "next/font/google"
 import { LanguageProvider } from "@/contexts/language-context"
 
@@ -20,7 +19,7 @@ const onest = Onest({
 })
 
 export const metadata: Metadata = {
-  title: "Paperfolio - Portfolio Landing Page",
+  title: "Portfolio Landing Page",
   description: "A playful portfolio landing page",
   generator: "v0.app",
 }

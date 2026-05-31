@@ -97,7 +97,7 @@ export default function AboutPage() {
           </div>
 
           <div className="space-y-6">
-            <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all">
+            <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all">
               <div className="flex justify-between items-start mb-3">
                 <h3 className="text-xl font-bold">{t("about.education1Title")}</h3>
                 <span className="bg-[#2F81F7] text-white px-3 py-1 text-sm font-bold border-2 border-black">
@@ -108,7 +108,7 @@ export default function AboutPage() {
               <p className="text-gray-600 text-sm">{t("about.education1Desc")}</p>
             </div>
 
-            <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all">
+            <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all">
               <div className="flex justify-between items-start mb-3">
                 <h3 className="text-xl font-bold">{t("about.education2Title")}</h3>
                 <span className="bg-[#FF6B6B] text-white px-3 py-1 text-sm font-bold border-2 border-black">
@@ -119,7 +119,7 @@ export default function AboutPage() {
               <p className="text-gray-600 text-sm">{t("about.education2Desc")}</p>
             </div>
 
-            <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all">
+            <div className="bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all">
               <div className="flex justify-between items-start mb-3">
                 <h3 className="text-xl font-bold">{t("about.education3Title")}</h3>
                 <span className="bg-[#6366F1] text-white px-3 py-1 text-sm font-bold border-2 border-black">2019</span>
@@ -186,7 +186,7 @@ export default function AboutPage() {
 
           <div className="space-y-6">
             <div className="flex gap-4 items-start">
-              <div className="w-5 h-5 bg-[#2F81F7] border-2 border-black rounded-[5px] flex-shrink-0 mt-1"></div>
+              <div className="w-5 h-5 bg-[#2F81F7] border-2 border-black rounded-[5px] shrink-0 mt-1"></div>
               <div>
                 <h3 className="text-xl font-bold mb-2">{t("about.value1Title")}</h3>
                 <p className="text-gray-600">{t("about.value1Desc")}</p>
@@ -194,7 +194,7 @@ export default function AboutPage() {
             </div>
 
             <div className="flex gap-4 items-start">
-              <div className="w-5 h-5 bg-[#FF6B6B] border-2 border-black rounded-[5px] flex-shrink-0 mt-1"></div>
+              <div className="w-5 h-5 bg-[#FF6B6B] border-2 border-black rounded-[5px] shrink-0 mt-1"></div>
               <div>
                 <h3 className="text-xl font-bold mb-2">{t("about.value2Title")}</h3>
                 <p className="text-gray-600">{t("about.value2Desc")}</p>

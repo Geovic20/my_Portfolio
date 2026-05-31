@@ -65,7 +65,7 @@ export default function ContactPage() {
               className="group bg-white border-3 md:border-4 border-black rounded-xl md:rounded-2xl p-5 md:p-8 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-200"
             >
               <div className="flex items-start gap-3 md:gap-4">
-                <div className="bg-[#25D366] text-white p-3 md:p-4 rounded-lg md:rounded-xl border-2 border-black flex-shrink-0">
+                <div className="bg-[#25D366] text-white p-3 md:p-4 rounded-lg md:rounded-xl border-2 border-black shrink-0">
                   <Phone className="w-6 h-6 md:w-8 md:h-8" />
                 </div>
                 <div className="flex-1 min-w-0">
@@ -82,7 +82,7 @@ export default function ContactPage() {
               className="group bg-white border-3 md:border-4 border-black rounded-xl md:rounded-2xl p-5 md:p-8 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-200"
             >
               <div className="flex items-start gap-3 md:gap-4">
-                <div className="bg-[#FF6B7A] text-white p-3 md:p-4 rounded-lg md:rounded-xl border-2 border-black flex-shrink-0">
+                <div className="bg-[#FF6B7A] text-white p-3 md:p-4 rounded-lg md:rounded-xl border-2 border-black shrink-0">
                   <Mail className="w-6 h-6 md:w-8 md:h-8" />
                 </div>
                 <div className="flex-1 min-w-0">

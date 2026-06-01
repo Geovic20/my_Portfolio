@@ -316,7 +316,7 @@ export function OrbitingSkills() {
   return (
     <main className="w-full flex items-center justify-center overflow-hidden">
       {/* Background pattern */}
-      <div className="absolute inset-0 opacity-10">
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
         <div 
           className="absolute inset-0" 
           style={{

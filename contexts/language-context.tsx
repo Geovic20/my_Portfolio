@@ -37,7 +37,6 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     for (const k of keys) {
       value = value?.[k]
     }
-
     return value || key
   }
 
@@ -229,12 +228,12 @@ const translations = {
       exp2Title: "Développeur Front-End",
       exp2Desc:
         "Création d'interfaces utilisateur modernes et réactives avec React et Tailwind CSS. Optimisation des performances et amélioration de l'expérience utilisateur sur plusieurs projets web.",
-      exp3Period: "Sep 2021 - Fév 2022",
-      exp3Title: "Développeur Back-End Junior",
+      exp3Period: "Mar 2024 - Sep 2024",
+      exp3Title: "Développeur Front-End : Ministère de l'Économie et des Finances",
       exp3Desc:
-        "Développement d'API REST avec Node.js et Express. Gestion de bases de données SQL et implémentation de systèmes d'authentification sécurisés pour applications web.",
-      exp4Period: "Jan 2021 - Août 2021",
-      exp4Title: "Stagiaire Développeur Web",
+        "Conception et intégration de pages web avec Next.js et laravel ; Participation à la refonte du site institutionnel du ministère ; Collaboration avec l'équipe IT pour les tests et le déploiement.",
+      exp4Period: "Août 2023 - Nov 2023",
+      exp4Title: "Stagiaire Dev Web : QCT Technologies",
       exp4Desc:
         "Participation au développement de sites web et applications. Apprentissage des bonnes pratiques de développement, travail en équipe et utilisation de Git pour le contrôle de version.",
       cta: "Télécharger mon CV",
@@ -407,12 +406,12 @@ const translations = {
       exp2Title: "Front-End Developer",
       exp2Desc:
         "Creation of modern and responsive user interfaces with React and Tailwind CSS. Performance optimization and user experience improvement across multiple web projects.",
-      exp3Period: "Sep 2021 - Feb 2022",
-      exp3Title: "Junior Back-End Developer",
+      exp3Period: "Mar 2024 - Sep 2024",
+      exp3Title: "Front-End Developer : Ministère de l'Économie et des Finances",
       exp3Desc:
-        "Development of REST APIs with Node.js and Express. SQL database management and implementation of secure authentication systems for web applications.",
-      exp4Period: "Jan 2021 - Aug 2021",
-      exp4Title: "Web Developer Intern",
+        "Design and integration of web pages with Next.js and laravel; Participation in the redesign of the ministry's institutional website; Collaboration with the IT team for testing and deployment.",
+      exp4Period: "Aug 2023 - Nov 2023",
+      exp4Title: "Web Developer Intern : QCT Technologies",
       exp4Desc:
         "Participation in the development of websites and applications. Learning development best practices, teamwork and using Git for version control.",
       cta: "See full resume",

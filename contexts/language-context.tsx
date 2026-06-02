@@ -220,14 +220,14 @@ const translations = {
       titleHighlight: "expérience",
       description:
         "Mon parcours dans le développement web combine formation académique solide et projets concrets qui m'ont permis de développer mes compétences techniques et humaines.",
-      exp1Period: "Jan 2023 - Présent",
-      exp1Title: "Développeur Full Stack",
+      exp1Period: "Jan 2026 - Présent",
+      exp1Title: "Développeur full stack freelance",
       exp1Desc:
         "Développement d'applications web complètes utilisant React, Next.js pour le front-end et Node.js, Django pour le back-end. Mise en place d'API REST et intégration de bases de données.",
-      exp2Period: "Mar 2022 - Déc 2022",
-      exp2Title: "Développeur Front-End",
+      exp2Period: "Mar 2025 - Déc 2025",
+      exp2Title: "Stage Développeur full stack : Ministère de la Santé",
       exp2Desc:
-        "Création d'interfaces utilisateur modernes et réactives avec React et Tailwind CSS. Optimisation des performances et amélioration de l'expérience utilisateur sur plusieurs projets web.",
+        "Conception et intégration d'interfaces avec Angular et java ; Participation à la refonte du site institutionnel du ministère ; Collaboration avec l'équipe IT pour les tests et le déploiement.",
       exp3Period: "Mar 2024 - Sep 2024",
       exp3Title: "Développeur Front-End : Ministère de l'Économie et des Finances",
       exp3Desc:
@@ -398,14 +398,14 @@ const translations = {
       titleHighlight: "past experience",
       description:
         "My journey in web development combines solid academic training and concrete projects that allowed me to develop my technical and human skills.",
-      exp1Period: "Jan 2023 - Present",
-      exp1Title: "Full Stack Developer",
+      exp1Period: "Jan 2026 - Present",
+      exp1Title: "Freelance full stack developer",
       exp1Desc:
         "Development of complete web applications using React, Next.js for front-end and Node.js, Django for back-end. Implementation of REST APIs and database integration.",
-      exp2Period: "Mar 2022 - Dec 2022",
-      exp2Title: "Front-End Developer",
+      exp2Period: "Mar 2025 - Dec 2025",
+      exp2Title: "Full-stack developer internship: Ministry of Health",
       exp2Desc:
-        "Creation of modern and responsive user interfaces with React and Tailwind CSS. Performance optimization and user experience improvement across multiple web projects.",
+        "Design and integration of interfaces with Angular and Java; Participation in the redesign of the ministry's institutional website; Collaboration with the IT team for testing and deployment.",
       exp3Period: "Mar 2024 - Sep 2024",
       exp3Title: "Front-End Developer : Ministère de l'Économie et des Finances",
       exp3Desc:

@@ -55,7 +55,7 @@ export const TailwindIcon = () => (
 
 // Create infinite items by triplicating the array
 const createInfiniteItems = (originalItems: TechStack[]) => {
-  const items = [];
+  const items: Array<Omit<TechStack, 'id'> & { id: string; originalIndex: number }> = [];
   for (let i = 0; i < 3; i++) {
     originalItems.forEach((item, index) => {
       items.push({
@@ -103,7 +103,6 @@ const RulerLines = ({
       />
     );
   }
-
   return <div className="relative w-full h-12 px-4 bg-white dark:bg-black border-t-3 border-b-3 border-black dark:border-white">{lines}</div>;
 };
 

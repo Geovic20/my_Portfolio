@@ -101,7 +101,7 @@ export default function AboutPage() {
               <div className="flex justify-between items-start mb-3">
                 <h3 className="text-xl font-bold">{t("about.education1Title")}</h3>
                 <span className="bg-[#2F81F7] text-white px-3 py-1 text-sm font-bold border-2 border-black">
-                  2022 - 2024
+                  2023 - 2026
                 </span>
               </div>
               <p className="text-gray-600 font-semibold mb-2">{t("about.education1School")}</p>
@@ -112,7 +112,7 @@ export default function AboutPage() {
               <div className="flex justify-between items-start mb-3">
                 <h3 className="text-xl font-bold">{t("about.education2Title")}</h3>
                 <span className="bg-[#FF6B6B] text-white px-3 py-1 text-sm font-bold border-2 border-black">
-                  2019 - 2022
+                  2022
                 </span>
               </div>
               <p className="text-gray-600 font-semibold mb-2">{t("about.education2School")}</p>

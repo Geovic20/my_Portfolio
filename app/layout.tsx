@@ -22,7 +22,6 @@ const onest = Onest({
 export const metadata: Metadata = {
   title: "Portfolio Landing Page",
   description: "A playful portfolio landing page",
-  generator: "v0.app",
 }
 
 export default function RootLayout({

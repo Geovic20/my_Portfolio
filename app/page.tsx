@@ -42,20 +42,21 @@ export default function Home() {
       </svg>
     )},
     { id: 10, name: "Next.js", icon: <StackIcon src={encodeURI("/Next.js.png")} /> },
-    { id: 11, name: "Tailwind", icon: (
+    { id: 11, name: "Vue.js", icon: <StackIcon src="/Vue.js.png" /> },    
+    { id: 12, name: "Tailwind CSS", icon: (     
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
         <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z" fill="#06B6D4"/>
       </svg>
     )},
-    { id: 12, name: "Django", icon: <StackIcon src="/Django.png" /> },
-    { id: 13, name: "Django REST", icon: <StackIcon src={encodeURI("/Django REST.png")} /> },
-    { id: 14, name: "Flask", icon: <StackIcon src="/Flask.png" /> },
-    { id: 15, name: "FastAPI", icon: <StackIcon src="/FastAPI.png" /> },
-    { id: 16, name: "PostgreSQL", icon: <StackIcon src="/PostgresSQL.png" /> },
-    { id: 17, name: "MySQL", icon: <StackIcon src="/MySQL.png" /> },
-    { id: 18, name: "MongoDB", icon: <StackIcon src="/MongoDB.png" /> },
-    { id: 19, name: "Docker", icon: <StackIcon src="/Docker.png" /> },
-    { id: 20, name: "GitHub", icon: <StackIcon src="/GitHub.png" /> },
+    { id: 13, name: "Django", icon: <StackIcon src="/Django.png" /> },
+    { id: 14, name: "Django REST", icon: <StackIcon src={encodeURI("/Django REST.png")} /> },
+    { id: 15, name: "Flask", icon: <StackIcon src="/Flask.png" /> },
+    { id: 16, name: "FastAPI", icon: <StackIcon src="/FastAPI.png" /> },
+    { id: 17, name: "PostgreSQL", icon: <StackIcon src="/PostgresSQL.png" /> },
+    { id: 18, name: "MySQL", icon: <StackIcon src="/MySQL.png" /> },
+    { id: 19, name: "MongoDB", icon: <StackIcon src="/MongoDB.png" /> },
+    { id: 20, name: "Docker", icon: <StackIcon src="/Docker.png" /> },
+    { id: 21, name: "GitHub", icon: <StackIcon src="/GitHub.png" /> },
   ];
 
   return (

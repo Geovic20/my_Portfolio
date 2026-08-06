@@ -75,7 +75,15 @@ export function RulerCarousel({
   // Start with the middle set, item 3 (centered)
   const [activeIndex, setActiveIndex] = useState(itemsPerSet + 3);
   const [isResetting, setIsResetting] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
   const previousIndexRef = useRef(itemsPerSet + 3);
+  const pauseTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const pauseAutoScroll = (durationMs = 5000) => {
+    setIsPaused(true);
+    if (pauseTimeoutRef.current) clearTimeout(pauseTimeoutRef.current);
+    pauseTimeoutRef.current = setTimeout(() => setIsPaused(false), durationMs);
+  };
 
   const handleItemClick = (newIndex: number) => {
     if (isResetting) return;
@@ -101,16 +109,19 @@ export function RulerCarousel({
 
     previousIndexRef.current = activeIndex;
     setActiveIndex(closestIndex);
+    pauseAutoScroll();
   };
 
   const handlePrevious = () => {
     if (isResetting) return;
     setActiveIndex((prev) => prev - 1);
+    pauseAutoScroll();
   };
 
   const handleNext = () => {
     if (isResetting) return;
     setActiveIndex((prev) => prev + 1);
+    pauseAutoScroll();
   };
 
   // Handle infinite scrolling
@@ -140,15 +151,39 @@ export function RulerCarousel({
       if (event.key === "ArrowLeft") {
         event.preventDefault();
         setActiveIndex((prev) => prev - 1);
+        pauseAutoScroll();
       } else if (event.key === "ArrowRight") {
         event.preventDefault();
         setActiveIndex((prev) => prev + 1);
+        pauseAutoScroll();
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isResetting]);
+
+  // Auto-scroll through items
+  useEffect(() => {
+    if (isResetting || isPaused) return;
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReducedMotion) return;
+
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => prev + 1);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [isResetting, isPaused]);
+
+  useEffect(() => {
+    return () => {
+      if (pauseTimeoutRef.current) clearTimeout(pauseTimeoutRef.current);
+    };
+  }, []);
 
   // Calculate target position - center the active item
   const centerPosition = 5;
@@ -159,7 +194,14 @@ export function RulerCarousel({
   const totalPages = itemsPerSet;
 
   return (
-    <div className="w-full flex flex-col items-center justify-center bg-white dark:bg-black py-12">
+    <div
+      className="w-full flex flex-col items-center justify-center bg-white dark:bg-black py-12"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => {
+        if (pauseTimeoutRef.current) clearTimeout(pauseTimeoutRef.current);
+        setIsPaused(false);
+      }}
+    >
       <div className="w-full flex flex-col justify-center relative">
         <div className="flex items-center justify-center">
           <RulerLines top />

@@ -1,6 +1,8 @@
 "use client"
 
 import { Mail, Phone, Linkedin, Github } from "lucide-react"
+import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
 import Link from "next/link"
@@ -24,7 +26,9 @@ export default function ContactPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-background">
+    <main className="min-h-screen bg-[#FFFFFF]">
+      <Navigation />
+
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8 md:mb-12">
@@ -102,14 +106,17 @@ export default function ContactPage() {
           </div>
 
           <div className="text-center mt-8 md:mt-12">
-            <Link href="/">
-              <Button className="w-full sm:w-auto bg-black text-white hover:bg-black/90 rounded-lg py-5 md:py-6 px-8 md:px-10 text-base md:text-lg font-semibold shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all active:scale-95">
-                {t("contact.backHome")}
-              </Button>
-            </Link>
+            <Button
+              asChild
+              className="w-full sm:w-auto bg-black text-white hover:bg-black/90 rounded-lg py-5 md:py-6 px-8 md:px-10 text-base md:text-lg font-semibold shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all active:scale-95"
+            >
+              <Link href="/">{t("contact.backHome")}</Link>
+            </Button>
           </div>
         </div>
       </div>
-    </div>
+
+      <Footer />
+    </main>
   )
 }

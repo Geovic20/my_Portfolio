@@ -75,6 +75,13 @@ const translations = {
       projectsDesc: "Plateformes e-commerce, dashboards, APIs, plateformes web et solutions sur mesure.",
       cta: "En savoir plus",
     },
+    notFound: {
+      title: "Cette page n'existe pas",
+      description:
+        "Le lien est peut-être cassé, ou la page a été déplacée. Pas de panique : tout le reste du site est à un clic d'ici.",
+      backHome: "Retour à l'accueil",
+      viewPortfolio: "Voir le portfolio",
+    },
     contact: {
       title: "Me",
       titleHighlight: "contacter",
@@ -257,6 +264,13 @@ const translations = {
       projects: "Several web projects completed",
       projectsDesc: "E-commerce platforms, dashboards, APIs, web platforms and custom solutions.",
       cta: "More about me",
+    },
+    notFound: {
+      title: "This page doesn't exist",
+      description:
+        "The link may be broken, or the page has moved. No worries: the rest of the site is one click away.",
+      backHome: "Back to home",
+      viewPortfolio: "View portfolio",
     },
     contact: {
       title: "Get in",

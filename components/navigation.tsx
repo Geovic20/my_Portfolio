@@ -3,12 +3,26 @@
 import { Mail, Menu, X, Languages } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { useLanguage } from "@/contexts/language-context"
 import { useState } from "react"
+
+const navLinks = [
+  { href: "/", labelKey: "nav.home" },
+  { href: "/about", labelKey: "nav.about" },
+  { href: "/portfolio", labelKey: "nav.portfolio" },
+]
 
 export function Navigation() {
   const { language, setLanguage, t } = useLanguage()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
+
+  // "/" must match exactly, the others also cover their sub-routes
+  // (e.g. /portfolio/case-study/1 keeps "Portfolio" active).
+  const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href))
+
+  const isContactActive = pathname.startsWith("/contact")
 
   return (
     <div className="container mx-auto px-4 pt-4 md:pt-8 pb-4">
@@ -18,25 +32,24 @@ export function Navigation() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-4 lg:gap-6 flex-1 justify-center">
-          <Link
-            href="/"
-            className="text-base lg:text-[18px] font-bold leading-5 hover:opacity-70 transition-opacity cursor-pointer"
-          >
-            {t("nav.home")}
-          </Link>
-          <Link
-            href="/about"
-            className="text-base lg:text-[18px] font-bold leading-5 hover:opacity-70 transition-opacity cursor-pointer"
-          >
-            {t("nav.about")}
-          </Link>
-          <Link
-            href="/portfolio"
-            className="text-base lg:text-[18px] font-bold leading-5 hover:opacity-70 transition-opacity cursor-pointer"
-          >
-            {t("nav.portfolio")}
-          </Link>
+        <div className="hidden md:flex items-center gap-2 lg:gap-3 flex-1 justify-center">
+          {navLinks.map((link) => {
+            const active = isActive(link.href)
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={active ? "page" : undefined}
+                className={`px-3 py-1.5 rounded-sm border-2 text-base lg:text-[18px] font-bold leading-5 transition-all cursor-pointer ${
+                  active
+                    ? "bg-[#2F81F7] text-white border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+                    : "border-transparent hover:opacity-70"
+                }`}
+              >
+                {t(link.labelKey)}
+              </Link>
+            )
+          })}
         </div>
 
         {/* Mobile Menu Button */}
@@ -44,6 +57,7 @@ export function Navigation() {
           className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
         >
           {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
@@ -58,11 +72,18 @@ export function Navigation() {
             <Languages className="w-5 h-5 mr-1 lg:mr-2" />
             <span className="font-bold text-sm">{language === "fr" ? "EN" : "FR"}</span>
           </Button>
-          <Link href="/contact" className="cursor-pointer">
-            <Button className="bg-black text-white hover:bg-black/90 rounded-sm px-4 lg:px-5 h-10 lg:h-12 min-w-11">
+          <Button
+            asChild
+            className={`rounded-sm px-4 lg:px-5 h-10 lg:h-12 min-w-11 border-2 ${
+              isContactActive
+                ? "bg-[#2F81F7] text-white hover:bg-[#2F81F7]/90 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]"
+                : "bg-black text-white hover:bg-black/90 border-transparent"
+            }`}
+          >
+            <Link href="/contact" aria-current={isContactActive ? "page" : undefined} aria-label="Contact">
               <Mail className="w-5 h-5 lg:w-6 lg:h-6" strokeWidth={2.5} />
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </nav>
 
@@ -70,27 +91,24 @@ export function Navigation() {
       {isMenuOpen && (
         <div className="md:hidden mt-4 bg-background border-4 border-black rounded-xl p-4 max-w-2xl mx-auto shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
           <div className="flex flex-col gap-4">
-            <Link
-              href="/"
-              className="text-lg font-bold py-2 hover:bg-gray-100 px-3 rounded-lg transition-colors cursor-pointer"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {t("nav.home")}
-            </Link>
-            <Link
-              href="/about"
-              className="text-lg font-bold py-2 hover:bg-gray-100 px-3 rounded-lg transition-colors cursor-pointer"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {t("nav.about")}
-            </Link>
-            <Link
-              href="/portfolio"
-              className="text-lg font-bold py-2 hover:bg-gray-100 px-3 rounded-lg transition-colors cursor-pointer"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {t("nav.portfolio")}
-            </Link>
+            {navLinks.map((link) => {
+              const active = isActive(link.href)
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  aria-current={active ? "page" : undefined}
+                  className={`text-lg font-bold py-2 px-3 rounded-lg border-2 transition-colors cursor-pointer ${
+                    active
+                      ? "bg-[#2F81F7] text-white border-black"
+                      : "border-transparent hover:bg-gray-100"
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {t(link.labelKey)}
+                </Link>
+              )
+            })}
 
             <div className="border-t-2 border-black pt-4 mt-2 flex gap-2">
               <Button
@@ -101,12 +119,23 @@ export function Navigation() {
                 <Languages className="w-5 h-5 mr-2" />
                 <span className="font-bold">{language === "fr" ? "English" : "Français"}</span>
               </Button>
-              <Link href="/contact" className="flex-1 cursor-pointer" onClick={() => setIsMenuOpen(false)}>
-                <Button className="w-full bg-black text-white hover:bg-black/90 rounded-sm h-12">
+              <Button
+                asChild
+                className={`flex-1 rounded-sm h-12 border-2 ${
+                  isContactActive
+                    ? "bg-[#2F81F7] text-white hover:bg-[#2F81F7]/90 border-black"
+                    : "bg-black text-white hover:bg-black/90 border-transparent"
+                }`}
+              >
+                <Link
+                  href="/contact"
+                  aria-current={isContactActive ? "page" : undefined}
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   <Mail className="w-5 h-5 mr-2" />
                   Contact
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </div>
         </div>

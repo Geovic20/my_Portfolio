@@ -3,6 +3,7 @@
 import { Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import Link from "next/link"
 import { useLanguage } from "@/contexts/language-context"
 
 export function ServicesSection() {
@@ -94,9 +95,14 @@ export function ServicesSection() {
               <p className="text-[16px] sm:text-[17px] md:text-[18px] leading-6.5 sm:leading-7 md:leading-7.5 font-medium text-[#393939] mb-6 sm:mb-8">
                 {t("services.ctaDesc")}
               </p>
-              <Button className="bg-black text-white hover:bg-black/90 rounded-2xl px-8 sm:px-12 py-5 sm:py-6 font-medium text-[16px] sm:text-[18px] w-full max-w-75 sm:max-w-85 h-14 sm:h-16">
-                <Mail className="w-5 h-5 mr-2" />
-                {t("services.ctaButton")}
+              <Button
+                asChild
+                className="bg-black text-white hover:bg-black/90 rounded-2xl px-8 sm:px-12 py-5 sm:py-6 font-medium text-[16px] sm:text-[18px] w-full max-w-75 sm:max-w-85 h-14 sm:h-16"
+              >
+                <Link href="/contact">
+                  <Mail className="w-5 h-5 mr-2" />
+                  {t("services.ctaButton")}
+                </Link>
               </Button>
             </div>
           </div>

@@ -4,6 +4,7 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
 
@@ -166,7 +167,7 @@ export default function PortfolioPage() {
             asChild
             className="w-full sm:w-auto bg-white text-black hover:bg-white/90 border-2 border-black h-12 md:h-14 px-6 md:px-8 text-base md:text-lg font-bold"
           >
-            <a href="#contact">{t("portfolio.ctaButton")}</a>
+            <Link href="/contact">{t("portfolio.ctaButton")}</Link>
           </Button>
         </div>
       </section>

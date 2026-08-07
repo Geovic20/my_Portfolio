@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, Mail, Phone, Github } from "lucide-react"
+import { Linkedin, Mail, Phone, Github } from "lucide-react"
 import Link from "next/link"
 
 export function Footer() {
@@ -29,14 +29,6 @@ export function Footer() {
                   className="w-10 h-10 bg-[#333] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity cursor-pointer"
                 >
                   <Github className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-[#FF6B7A] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity cursor-pointer"
-                >
-                  <Instagram className="w-5 h-5" />
                 </a>
               </div>
             </div>

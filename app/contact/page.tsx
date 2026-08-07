@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, Phone, Linkedin, Instagram, Facebook, Send } from "lucide-react"
+import { Mail, Phone, Linkedin, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
 import Link from "next/link"
@@ -12,33 +12,14 @@ export default function ContactPage() {
     {
       name: "LinkedIn",
       icon: Linkedin,
-      url: "https://linkedin.com",
+      url: "https://www.linkedin.com/in/g%C3%A9ovic-kpossilande-1b0367292/",
       color: "bg-[#0077B5]",
     },
     {
-      name: "Instagram",
-      icon: Instagram,
-      url: "https://instagram.com",
-      color: "bg-gradient-to-br from-[#833AB4] via-[#FD1D1D] to-[#F77737]",
-    },
-    {
-      name: "Facebook",
-      icon: Facebook,
-      url: "https://facebook.com",
-      color: "bg-[#1877F2]",
-    },
-    {
-      name: "Snapchat",
-      icon: Send,
-      url: "https://snapchat.com",
-      color: "bg-[#FFFC00]",
-      textColor: "text-black",
-    },
-    {
-      name: "TikTok",
-      icon: Send,
-      url: "https://tiktok.com",
-      color: "bg-black",
+      name: "GitHub",
+      icon: Github,
+      url: "https://github.com/Geovic20",
+      color: "bg-[#333333]",
     },
   ]
 
@@ -59,7 +40,7 @@ export default function ContactPage() {
           <div className="grid sm:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
             {/* WhatsApp */}
             <a
-              href="https://wa.me/22901908350"
+              href="https://wa.me/2290190835005"
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-white border-3 md:border-4 border-black rounded-xl md:rounded-2xl p-5 md:p-8 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-200"
@@ -100,7 +81,7 @@ export default function ContactPage() {
               {t("contact.socialSubtitle")}
             </p>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 md:gap-4">
+            <div className="grid grid-cols-2 gap-3 md:gap-4 max-w-md mx-auto">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
@@ -110,7 +91,7 @@ export default function ContactPage() {
                   className="group flex flex-col items-center gap-2 md:gap-3 p-3 md:p-4 border-2 border-black rounded-lg md:rounded-xl hover:shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-200 active:scale-95"
                 >
                   <div
-                    className={`${social.color} ${social.textColor || "text-white"} p-3 md:p-4 rounded-lg md:rounded-xl border-2 border-black`}
+                    className={`${social.color} text-white p-3 md:p-4 rounded-lg md:rounded-xl border-2 border-black`}
                   >
                     <social.icon className="w-5 h-5 md:w-6 md:h-6" />
                   </div>

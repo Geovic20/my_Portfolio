@@ -5,6 +5,7 @@ import "./globals.css"
 import { Onest, Geist_Mono as V0_Font_Geist_Mono } from "next/font/google"
 import { LanguageProvider } from "@/contexts/language-context"
 import { IntroLoader } from "@/components/intro-loader"
+import { siteConfig, siteUrl } from "@/lib/site"
 
 // Initialize fonts
 const _geistMono = V0_Font_Geist_Mono({
@@ -20,8 +21,41 @@ const onest = Onest({
 })
 
 export const metadata: Metadata = {
-  title: "Portfolio Landing Page",
-  description: "A playful portfolio landing page",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: `${siteConfig.name} — ${siteConfig.jobTitle}`,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  keywords: [...siteConfig.keywords],
+  authors: [{ name: siteConfig.name, url: siteConfig.github }],
+  creator: siteConfig.name,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: siteConfig.locale,
+    url: "/",
+    siteName: siteConfig.name,
+    title: `${siteConfig.name} — ${siteConfig.jobTitle}`,
+    description: siteConfig.description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.name} — ${siteConfig.jobTitle}`,
+    description: siteConfig.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 }
 
 export default function RootLayout({

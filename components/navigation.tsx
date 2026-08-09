@@ -80,7 +80,7 @@ export function Navigation() {
                 : "bg-black text-white hover:bg-black/90 border-transparent"
             }`}
           >
-            <Link href="/contact" aria-current={isContactActive ? "page" : undefined} aria-label="Contact">
+            <Link href="/contact" aria-current={isContactActive ? "page" : undefined} aria-label={t("nav.contact")}>
               <Mail className="w-5 h-5 lg:w-6 lg:h-6" strokeWidth={2.5} />
             </Link>
           </Button>
@@ -133,7 +133,7 @@ export function Navigation() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <Mail className="w-5 h-5 mr-2" />
-                  Contact
+                  {t("nav.contact")}
                 </Link>
               </Button>
             </div>

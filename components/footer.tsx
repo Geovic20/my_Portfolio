@@ -1,7 +1,20 @@
+"use client"
+
 import { Linkedin, Mail, Phone, Github } from "lucide-react"
 import Link from "next/link"
+import { useLanguage } from "@/contexts/language-context"
+import { siteConfig } from "@/lib/site"
 
 export function Footer() {
+  const { t } = useLanguage()
+
+  const navLinks = [
+    { href: "/", labelKey: "nav.home" },
+    { href: "/about", labelKey: "nav.about" },
+    { href: "/portfolio", labelKey: "nav.portfolio" },
+    { href: "/contact", labelKey: "nav.contact" },
+  ]
+
   return (
     <footer className="bg-black text-white py-12 md:py-16">
       <div className="container mx-auto px-4">
@@ -9,23 +22,23 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-12">
             {/* Info */}
             <div>
-              <h3 className="text-xl md:text-2xl font-bold mb-4">KPOSSILANDE Géovic</h3>
-              <p className="text-gray-400 mb-6 text-sm leading-relaxed">
-                Développeur Full-Stack passionné par la création d&apos;applications web modernes et performantes.
-              </p>
+              <h3 className="text-xl md:text-2xl font-bold mb-4">{siteConfig.name}</h3>
+              <p className="text-gray-400 mb-6 text-sm leading-relaxed">{t("footer.tagline")}</p>
               <div className="flex gap-3">
                 <a
-                  href="https://www.linkedin.com/in/g%C3%A9ovic-kpossilande-1b0367292/"
+                  href={siteConfig.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={t("footer.linkedin")}
                   className="w-10 h-10 bg-[#2F81F7] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity cursor-pointer"
                 >
                   <Linkedin className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://github.com/Geovic20"
+                  href={siteConfig.github}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={t("footer.github")}
                   className="w-10 h-10 bg-[#333] rounded-full flex items-center justify-center hover:opacity-80 transition-opacity cursor-pointer"
                 >
                   <Github className="w-5 h-5" />
@@ -35,38 +48,28 @@ export function Footer() {
 
             {/* Navigation */}
             <div>
-              <h3 className="font-bold mb-4">Navigation</h3>
+              <h3 className="font-bold mb-4">{t("footer.navTitle")}</h3>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li>
-                  <Link href="/" className="hover:text-white transition-colors cursor-pointer">
-                    Accueil
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about" className="hover:text-white transition-colors cursor-pointer">
-                    À propos
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/portfolio" className="hover:text-white transition-colors cursor-pointer">
-                    Portfolio
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="hover:text-white transition-colors cursor-pointer">
-                    Contact
-                  </Link>
-                </li>
+                {navLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href} className="hover:text-white transition-colors cursor-pointer">
+                      {t(link.labelKey)}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
 
             {/* Contact */}
             <div>
-              <h3 className="font-bold mb-4">Contact</h3>
+              <h3 className="font-bold mb-4">{t("footer.contactTitle")}</h3>
               <ul className="space-y-3 text-gray-400 text-sm">
                 <li className="flex items-center gap-2">
                   <Mail className="w-4 h-4 shrink-0" />
-                  <a href="mailto:kpossilandegeovic68@gmail.com" className="hover:text-white transition-colors break-all cursor-pointer">
+                  <a
+                    href="mailto:kpossilandegeovic68@gmail.com"
+                    className="hover:text-white transition-colors break-all cursor-pointer"
+                  >
                     kpossilandegeovic68@gmail.com
                   </a>
                 </li>
@@ -81,7 +84,9 @@ export function Footer() {
           </div>
 
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-            <p>&copy; {new Date().getFullYear()} KPOSSILANDE Géovic - Tous droits réservés</p>
+            <p>
+              &copy; {new Date().getFullYear()} {siteConfig.name} - {t("footer.rights")}
+            </p>
           </div>
         </div>
       </div>

@@ -25,6 +25,13 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     setMounted(true)
   }, [])
 
+  // The root layout renders lang="fr" on the server; keep the DOM in sync once
+  // the stored preference is known, otherwise screen readers read English text
+  // with French phonetics.
+  useEffect(() => {
+    document.documentElement.lang = language
+  }, [language])
+
   const changeLanguage = (lang: Language) => {
     setLanguage(lang)
     localStorage.setItem("language", lang)
@@ -61,8 +68,42 @@ const translations = {
       home: "Accueil",
       about: "À propos",
       portfolio: "Portfolio",
-      pages: "Pages",
-      cart: "Panier",
+      contact: "Contact",
+    },
+    home: {
+      stackTitle: "STACK TECHNOLOGIQUE",
+    },
+    carousel: {
+      label: "Stack technologique",
+      previous: "Technologie précédente",
+      next: "Technologie suivante",
+    },
+    footer: {
+      tagline:
+        "Développeur Full-Stack passionné par la création d'applications web modernes et performantes.",
+      navTitle: "Navigation",
+      contactTitle: "Contact",
+      rights: "Tous droits réservés",
+      linkedin: "Profil LinkedIn",
+      github: "Profil GitHub",
+    },
+    caseStudy: {
+      back: "Retour au portfolio",
+      people: "personnes",
+      demo: "Voir la démo",
+      code: "Voir le code",
+      technologies: "Technologies utilisées",
+      challenges: "Défis rencontrés",
+      solutions: "Solutions apportées",
+      results: "Résultats obtenus",
+      ctaTitle: "Vous avez un projet similaire ?",
+      ctaDesc: "Discutons de comment je peux vous aider à le réaliser.",
+      ctaButton: "Me contacter",
+    },
+    alt: {
+      heroAvatar: "Illustration du personnage",
+      aboutIllustration: "Illustration à propos",
+      profileIllustration: "Illustration de profil",
     },
     aboutSection: {
       title: "Qui se cache derrière",
@@ -251,8 +292,42 @@ const translations = {
       home: "Home",
       about: "About",
       portfolio: "Portfolio",
-      pages: "Pages",
-      cart: "Cart",
+      contact: "Contact",
+    },
+    home: {
+      stackTitle: "TECH STACK",
+    },
+    carousel: {
+      label: "Tech stack",
+      previous: "Previous technology",
+      next: "Next technology",
+    },
+    footer: {
+      tagline:
+        "Full-Stack developer passionate about building modern, high-performance web applications.",
+      navTitle: "Navigation",
+      contactTitle: "Contact",
+      rights: "All rights reserved",
+      linkedin: "LinkedIn profile",
+      github: "GitHub profile",
+    },
+    caseStudy: {
+      back: "Back to portfolio",
+      people: "people",
+      demo: "View demo",
+      code: "View code",
+      technologies: "Technologies used",
+      challenges: "Challenges faced",
+      solutions: "Solutions provided",
+      results: "Results achieved",
+      ctaTitle: "Have a similar project?",
+      ctaDesc: "Let's discuss how I can help you make it happen.",
+      ctaButton: "Contact me",
+    },
+    alt: {
+      heroAvatar: "Character illustration",
+      aboutIllustration: "About illustration",
+      profileIllustration: "Profile illustration",
     },
     aboutSection: {
       title: "Who is behind",

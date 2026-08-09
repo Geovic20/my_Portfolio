@@ -35,7 +35,7 @@ export default function AboutPage() {
             <div className="relative w-full max-w-70 sm:max-w-sm md:max-w-lg aspect-square border-[3px] md:border-4 border-black rounded-full overflow-hidden bg-[#FF6B6B] shadow-[-6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[-8px_8px_0px_0px_rgba(0,0,0,1)]">
               <Image
                 src="/images/about-me.svg"
-                alt="Illustration de profil"
+                alt={t("alt.profileIllustration")}
                 fill
                 sizes="(max-width: 640px) 280px, (max-width: 768px) 384px, 512px"
                 className="object-cover"

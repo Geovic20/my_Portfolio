@@ -16,7 +16,7 @@ export function AboutSection() {
           <div className="relative w-full max-w-lg aspect-square border-4 border-black rounded-full overflow-hidden bg-[#FF6B6B] shadow-[-8px_8px_0px_0px_rgba(0,0,0,1)]">
             <Image
               src="/images/about-me.svg"
-              alt="Illustration à propos"
+              alt={t("alt.aboutIllustration")}
               fill
               sizes="(max-width: 768px) 90vw, 512px"
               className="object-cover"

@@ -71,7 +71,14 @@ export function CaseStudyView({ study }: { study: CaseStudy }) {
 
           {/* Project Image */}
           <div className="relative w-full h-75 md:h-125 border-4 border-black rounded-2xl overflow-hidden shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-            <Image src={study.image} alt={title} fill className="object-cover" />
+            <Image
+              src={study.image}
+              alt={title}
+              fill
+              sizes="(max-width: 1024px) 100vw, 1024px"
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </section>

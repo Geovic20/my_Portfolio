@@ -107,7 +107,13 @@ export default function PortfolioPage() {
                   className="relative h-48 sm:h-56 md:h-64 border-b-3 md:border-b-4 border-black overflow-hidden"
                   style={{ backgroundColor: project.bgColor }}
                 >
-                  <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+                  <Image
+                    src={project.image || "/placeholder.svg"}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 640px"
+                    className="object-cover"
+                  />
                 </div>
 
                 {/* Project Content */}

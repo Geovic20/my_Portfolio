@@ -112,8 +112,9 @@ export function TestimonialsSection() {
             <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-110 h-110 rounded-full overflow-hidden hidden xl:block">
               <Image
                 src={currentTestimonial.image || "/placeholder.svg"}
-                alt="Client testimonial"
+                alt=""
                 fill
+                sizes="440px"
                 className="object-cover"
               />
             </div>

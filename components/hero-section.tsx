@@ -3,6 +3,7 @@
 import { Mail, FolderOpen } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
+import Image from "next/image"
 import Link from "next/link"
 
 export function HeroSection() {
@@ -43,10 +44,13 @@ export function HeroSection() {
 
         <div className="flex justify-center md:justify-end order-1 md:order-2">
           <div className="relative w-full max-w-70 sm:max-w-[320px] md:max-w-md aspect-square bg-[#FDB927] border-4 border-black rounded-2xl md:rounded-3xl overflow-hidden shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-            <img
+            <Image
               src="/images/design-mode/63407fbdc2d4ac5270385fd4_home-he.png"
-              alt="Illustrated character avatar"
-              className="w-full h-full object-cover"
+              alt="Illustration du personnage"
+              fill
+              sizes="(max-width: 640px) 280px, (max-width: 768px) 320px, 448px"
+              className="object-cover"
+              priority
             />
           </div>
         </div>

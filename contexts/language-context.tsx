@@ -5,6 +5,8 @@ import { createContext, useContext, useState, useEffect } from "react"
 
 type Language = "fr" | "en"
 
+type TranslationNode = string | { [key: string]: TranslationNode }
+
 interface LanguageContextType {
   language: Language
   setLanguage: (lang: Language) => void
@@ -15,14 +17,12 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguage] = useState<Language>("fr")
-  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem("language") as Language | null
-    if (savedLanguage && (savedLanguage === "fr" || savedLanguage === "en")) {
+    const savedLanguage = localStorage.getItem("language")
+    if (savedLanguage === "fr" || savedLanguage === "en") {
       setLanguage(savedLanguage)
     }
-    setMounted(true)
   }, [])
 
   // The root layout renders lang="fr" on the server; keep the DOM in sync once
@@ -37,14 +37,16 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem("language", lang)
   }
 
+  // Falls back to the key itself when a translation is missing, so an oversight
+  // shows up on screen instead of rendering an empty string.
   const t = (key: string): string => {
-    const keys = key.split(".")
-    let value: any = translations[language]
+    let node: TranslationNode | undefined = translations[language]
 
-    for (const k of keys) {
-      value = value?.[k]
+    for (const part of key.split(".")) {
+      if (typeof node !== "object" || node === null) return key
+      node = node[part]
     }
-    return value || key
+    return typeof node === "string" ? node : key
   }
 
   return (

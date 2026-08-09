@@ -1,6 +1,6 @@
 import { Navigation } from "@/components/navigation"
 import { HeroSection } from "@/components/hero-section"
-import { RulerCarousel } from "@/components/ruler-carousel"
+import { TechStackSection } from "@/components/tech-stack-section"
 import { ServicesSection } from "@/components/services-section"
 import { AboutSection } from "@/components/about-section"
 import { PortfolioSection } from "@/components/portfolio-section"
@@ -59,12 +59,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#FFFFFF]">
       <Navigation />
       <HeroSection />
-      <div className="w-full py-12">
-        <h2 className="text-3xl md:text-4xl font-black text-center text-black mb-12 tracking-tight">
-          STACK TECHNOLOGIQUE
-        </h2>
-        <RulerCarousel originalItems={techStack} />
-      </div>
+      <TechStackSection items={techStack} />
       <ServicesSection />
       <AboutSection />
       <PortfolioSection />

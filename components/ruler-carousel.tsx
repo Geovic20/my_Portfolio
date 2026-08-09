@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useLayoutEffect, useCallback } from "react";
 import { Rewind, FastForward } from "lucide-react";
+import { useLanguage } from "@/contexts/language-context";
 
 export interface TechStack {
   id: number;
@@ -62,6 +63,7 @@ const RulerLines = ({ top = true, totalLines = 100 }: { top?: boolean; totalLine
 };
 
 export function RulerCarousel({ originalItems }: { originalItems: TechStack[] }) {
+  const { t } = useLanguage();
   const infiniteItems = createInfiniteItems(originalItems);
   const itemsPerSet = originalItems.length;
 
@@ -200,7 +202,7 @@ export function RulerCarousel({ originalItems }: { originalItems: TechStack[] })
         className="w-full flex flex-col justify-center relative"
         role="group"
         aria-roledescription="carrousel"
-        aria-label="Stack technologique"
+        aria-label={t("carousel.label")}
         tabIndex={0}
         onKeyDown={handleKeyDown}
         onFocus={pauseAutoScroll}
@@ -279,7 +281,7 @@ export function RulerCarousel({ originalItems }: { originalItems: TechStack[] })
           type="button"
           onClick={goPrevious}
           className="p-3 border-3 border-black bg-white hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all"
-          aria-label="Technologie précédente"
+          aria-label={t("carousel.previous")}
         >
           <Rewind className="w-5 h-5 md:w-6 md:h-6 text-black" />
         </button>
@@ -298,7 +300,7 @@ export function RulerCarousel({ originalItems }: { originalItems: TechStack[] })
           type="button"
           onClick={goNext}
           className="p-3 border-3 border-black bg-white hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all"
-          aria-label="Technologie suivante"
+          aria-label={t("carousel.next")}
         >
           <FastForward className="w-5 h-5 md:w-6 md:h-6 text-black" />
         </button>

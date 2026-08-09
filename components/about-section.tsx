@@ -14,7 +14,13 @@ export function AboutSection() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
         <div className="flex justify-center">
           <div className="relative w-full max-w-lg aspect-square border-4 border-black rounded-full overflow-hidden bg-[#FF6B6B] shadow-[-8px_8px_0px_0px_rgba(0,0,0,1)]">
-            <Image src="/images/about-me.svg" alt="About me illustration" fill className="object-cover" />
+            <Image
+              src="/images/about-me.svg"
+              alt={t("alt.aboutIllustration")}
+              fill
+              sizes="(max-width: 768px) 90vw, 512px"
+              className="object-cover"
+            />
           </div>
         </div>
 
@@ -45,12 +51,15 @@ export function AboutSection() {
             </div>
           </div>
 
-          <Link href="/about" className="cursor-pointer">
-            <Button className="bg-[#0B0B0B] text-white hover:bg-black/90 rounded-lg py-5 px-8 md:py-5.5 md:px-15.5 text-base md:text-lg font-semibold h-auto w-full sm:w-auto sm:min-w-60">
+          <Button
+            asChild
+            className="bg-[#0B0B0B] text-white hover:bg-black/90 rounded-lg py-5 px-8 md:py-5.5 md:px-15.5 text-base md:text-lg font-semibold h-auto w-full sm:w-auto sm:min-w-60"
+          >
+            <Link href="/about">
               <User className="w-5 h-5" />
               {t("aboutSection.cta")}
-            </Button>
-          </Link>
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@
 import { Mail, FolderOpen } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
+import Image from "next/image"
 import Link from "next/link"
 
 export function HeroSection() {
@@ -23,30 +24,37 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-7 pt-2 md:pt-4">
-            <Link href="/contact" className="w-full sm:w-auto cursor-pointer">
-              <Button className="w-full sm:w-auto bg-[#0B0B0B] text-white hover:bg-black/90 rounded-lg py-4 px-6 sm:py-5 sm:px-8 md:py-5.5 md:px-15.5 text-base md:text-lg font-semibold h-auto min-h-12 sm:min-w-50 md:min-w-60">
+            <Button
+              asChild
+              className="w-full sm:w-auto bg-[#0B0B0B] text-white hover:bg-black/90 rounded-lg py-4 px-6 sm:py-5 sm:px-8 md:py-5.5 md:px-15.5 text-base md:text-lg font-semibold h-auto min-h-12 sm:min-w-50 md:min-w-60"
+            >
+              <Link href="/contact">
                 <Mail className="w-5 h-5 mr-2" />
                 {t("hero.cta1")}
-              </Button>
-            </Link>
-            <Link href="/portfolio" className="w-full sm:w-auto cursor-pointer">
-              <Button
-                variant="outline"
-                className="w-full sm:w-auto bg-white border-[3px] border-black hover:bg-gray-50 rounded-lg py-4 px-6 sm:py-5 sm:px-8 md:py-5.5 md:px-15.5 text-base md:text-lg font-semibold h-auto min-h-12 sm:min-w-50 md:min-w-60"
-              >
+              </Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              className="w-full sm:w-auto bg-white border-[3px] border-black hover:bg-gray-50 rounded-lg py-4 px-6 sm:py-5 sm:px-8 md:py-5.5 md:px-15.5 text-base md:text-lg font-semibold h-auto min-h-12 sm:min-w-50 md:min-w-60"
+            >
+              <Link href="/portfolio">
                 <FolderOpen className="w-5 h-5 mr-2" />
                 {t("hero.cta2")}
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
 
         <div className="flex justify-center md:justify-end order-1 md:order-2">
           <div className="relative w-full max-w-70 sm:max-w-[320px] md:max-w-md aspect-square bg-[#FDB927] border-4 border-black rounded-2xl md:rounded-3xl overflow-hidden shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-            <img
+            <Image
               src="/images/design-mode/63407fbdc2d4ac5270385fd4_home-he.png"
-              alt="Illustrated character avatar"
-              className="w-full h-full object-cover"
+              alt={t("alt.heroAvatar")}
+              fill
+              sizes="(max-width: 640px) 280px, (max-width: 768px) 320px, 448px"
+              className="object-cover"
+              priority
             />
           </div>
         </div>

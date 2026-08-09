@@ -5,6 +5,8 @@ import { createContext, useContext, useState, useEffect } from "react"
 
 type Language = "fr" | "en"
 
+type TranslationNode = string | { [key: string]: TranslationNode }
+
 interface LanguageContextType {
   language: Language
   setLanguage: (lang: Language) => void
@@ -15,29 +17,36 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguage] = useState<Language>("fr")
-  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem("language") as Language | null
-    if (savedLanguage && (savedLanguage === "fr" || savedLanguage === "en")) {
+    const savedLanguage = localStorage.getItem("language")
+    if (savedLanguage === "fr" || savedLanguage === "en") {
       setLanguage(savedLanguage)
     }
-    setMounted(true)
   }, [])
+
+  // The root layout renders lang="fr" on the server; keep the DOM in sync once
+  // the stored preference is known, otherwise screen readers read English text
+  // with French phonetics.
+  useEffect(() => {
+    document.documentElement.lang = language
+  }, [language])
 
   const changeLanguage = (lang: Language) => {
     setLanguage(lang)
     localStorage.setItem("language", lang)
   }
 
+  // Falls back to the key itself when a translation is missing, so an oversight
+  // shows up on screen instead of rendering an empty string.
   const t = (key: string): string => {
-    const keys = key.split(".")
-    let value: any = translations[language]
+    let node: TranslationNode | undefined = translations[language]
 
-    for (const k of keys) {
-      value = value?.[k]
+    for (const part of key.split(".")) {
+      if (typeof node !== "object" || node === null) return key
+      node = node[part]
     }
-    return value || key
+    return typeof node === "string" ? node : key
   }
 
   return (
@@ -61,8 +70,42 @@ const translations = {
       home: "Accueil",
       about: "À propos",
       portfolio: "Portfolio",
-      pages: "Pages",
-      cart: "Panier",
+      contact: "Contact",
+    },
+    home: {
+      stackTitle: "STACK TECHNOLOGIQUE",
+    },
+    carousel: {
+      label: "Stack technologique",
+      previous: "Technologie précédente",
+      next: "Technologie suivante",
+    },
+    footer: {
+      tagline:
+        "Développeur Full-Stack passionné par la création d'applications web modernes et performantes.",
+      navTitle: "Navigation",
+      contactTitle: "Contact",
+      rights: "Tous droits réservés",
+      linkedin: "Profil LinkedIn",
+      github: "Profil GitHub",
+    },
+    caseStudy: {
+      back: "Retour au portfolio",
+      people: "personnes",
+      demo: "Voir la démo",
+      code: "Voir le code",
+      technologies: "Technologies utilisées",
+      challenges: "Défis rencontrés",
+      solutions: "Solutions apportées",
+      results: "Résultats obtenus",
+      ctaTitle: "Vous avez un projet similaire ?",
+      ctaDesc: "Discutons de comment je peux vous aider à le réaliser.",
+      ctaButton: "Me contacter",
+    },
+    alt: {
+      heroAvatar: "Illustration du personnage",
+      aboutIllustration: "Illustration à propos",
+      profileIllustration: "Illustration de profil",
     },
     aboutSection: {
       title: "Qui se cache derrière",
@@ -251,8 +294,42 @@ const translations = {
       home: "Home",
       about: "About",
       portfolio: "Portfolio",
-      pages: "Pages",
-      cart: "Cart",
+      contact: "Contact",
+    },
+    home: {
+      stackTitle: "TECH STACK",
+    },
+    carousel: {
+      label: "Tech stack",
+      previous: "Previous technology",
+      next: "Next technology",
+    },
+    footer: {
+      tagline:
+        "Full-Stack developer passionate about building modern, high-performance web applications.",
+      navTitle: "Navigation",
+      contactTitle: "Contact",
+      rights: "All rights reserved",
+      linkedin: "LinkedIn profile",
+      github: "GitHub profile",
+    },
+    caseStudy: {
+      back: "Back to portfolio",
+      people: "people",
+      demo: "View demo",
+      code: "View code",
+      technologies: "Technologies used",
+      challenges: "Challenges faced",
+      solutions: "Solutions provided",
+      results: "Results achieved",
+      ctaTitle: "Have a similar project?",
+      ctaDesc: "Let's discuss how I can help you make it happen.",
+      ctaButton: "Contact me",
+    },
+    alt: {
+      heroAvatar: "Character illustration",
+      aboutIllustration: "About illustration",
+      profileIllustration: "Profile illustration",
     },
     aboutSection: {
       title: "Who is behind",

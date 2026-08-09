@@ -10,7 +10,7 @@ import { useLanguage } from "@/contexts/language-context"
 import type { CaseStudy } from "./case-studies"
 
 export function CaseStudyView({ study }: { study: CaseStudy }) {
-  const { language } = useLanguage()
+  const { language, t } = useLanguage()
   const title = language === "fr" ? study.titleFr : study.titleEn
   const desc = language === "fr" ? study.descFr : study.descEn
   const duration = language === "fr" ? study.durationFr : study.durationEn
@@ -27,7 +27,7 @@ export function CaseStudyView({ study }: { study: CaseStudy }) {
       <div className="container mx-auto px-4 pt-8">
         <Link href="/portfolio" className="inline-flex items-center gap-2 text-gray-600 hover:text-black transition-colors">
           <ArrowLeft className="w-4 h-4" />
-          {language === "fr" ? "Retour au portfolio" : "Back to portfolio"}
+          {t("caseStudy.back")}
         </Link>
       </div>
 
@@ -49,7 +49,7 @@ export function CaseStudyView({ study }: { study: CaseStudy }) {
             </div>
             <div className="flex items-center gap-2">
               <Users className="w-5 h-5 text-gray-500" />
-              <span className="text-gray-600">{study.teamSize} {language === "fr" ? "personnes" : "people"}</span>
+              <span className="text-gray-600">{study.teamSize} {t("caseStudy.people")}</span>
             </div>
           </div>
 
@@ -58,20 +58,27 @@ export function CaseStudyView({ study }: { study: CaseStudy }) {
             <Button asChild className="bg-black text-white hover:bg-black/90 border-2 border-black">
               <a href={study.demoUrl} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="w-4 h-4 mr-2" />
-                {language === "fr" ? "Voir la démo" : "View Demo"}
+                {t("caseStudy.demo")}
               </a>
             </Button>
             <Button asChild variant="outline" className="border-2 border-black hover:bg-black hover:text-white">
               <a href={study.githubUrl} target="_blank" rel="noopener noreferrer">
                 <Github className="w-4 h-4 mr-2" />
-                {language === "fr" ? "Voir le code" : "View Code"}
+                {t("caseStudy.code")}
               </a>
             </Button>
           </div>
 
           {/* Project Image */}
           <div className="relative w-full h-75 md:h-125 border-4 border-black rounded-2xl overflow-hidden shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-            <Image src={study.image} alt={title} fill className="object-cover" />
+            <Image
+              src={study.image}
+              alt={title}
+              fill
+              sizes="(max-width: 1024px) 100vw, 1024px"
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </section>
@@ -80,7 +87,7 @@ export function CaseStudyView({ study }: { study: CaseStudy }) {
       <section className="container mx-auto px-4 py-12">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-6">
-            {language === "fr" ? "Technologies utilisées" : "Technologies Used"}
+            {t("caseStudy.technologies")}
           </h2>
           <div className="flex flex-wrap gap-3">
             {study.technologies.map((tech) => (
@@ -96,7 +103,7 @@ export function CaseStudyView({ study }: { study: CaseStudy }) {
       <section className="container mx-auto px-4 py-12">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-6">
-            {language === "fr" ? "Défis rencontrés" : "Challenges Faced"}
+            {t("caseStudy.challenges")}
           </h2>
           <div className="space-y-4">
             {challenges.map((challenge, index) => (
@@ -115,7 +122,7 @@ export function CaseStudyView({ study }: { study: CaseStudy }) {
       <section className="container mx-auto px-4 py-12">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-6">
-            {language === "fr" ? "Solutions apportées" : "Solutions Provided"}
+            {t("caseStudy.solutions")}
           </h2>
           <div className="space-y-4">
             {solutions.map((solution, index) => (
@@ -134,7 +141,7 @@ export function CaseStudyView({ study }: { study: CaseStudy }) {
       <section className="container mx-auto px-4 py-12">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold mb-6">
-            {language === "fr" ? "Résultats obtenus" : "Results Achieved"}
+            {t("caseStudy.results")}
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
             {results.map((result, index) => (
@@ -150,14 +157,14 @@ export function CaseStudyView({ study }: { study: CaseStudy }) {
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto bg-[#2F81F7] border-4 border-black p-8 md:p-12 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] text-center rounded-2xl">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            {language === "fr" ? "Vous avez un projet similaire ?" : "Have a similar project?"}
+            {t("caseStudy.ctaTitle")}
           </h2>
           <p className="text-white/90 mb-8">
-            {language === "fr" ? "Discutons de comment je peux vous aider à le réaliser." : "Let's discuss how I can help you make it happen."}
+            {t("caseStudy.ctaDesc")}
           </p>
           <Button asChild className="bg-white text-black hover:bg-white/90 border-2 border-black font-bold">
             <Link href="/contact">
-              {language === "fr" ? "Me contacter" : "Contact me"}
+              {t("caseStudy.ctaButton")}
             </Link>
           </Button>
         </div>

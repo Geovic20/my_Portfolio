@@ -82,7 +82,7 @@ const translations = {
     },
     footer: {
       tagline:
-        "Développeur Full-Stack passionné par la création d'applications web modernes et performantes.",
+        "Développeur full-stack passionné par la résolution de problèmes et la conception de logiciels fiables, maintenables et évolutifs.",
       navTitle: "Navigation",
       contactTitle: "Contact",
       rights: "Tous droits réservés",
@@ -111,7 +111,7 @@ const translations = {
       title: "Qui se cache derrière",
       titleHighlight: "ce travail ?",
       description:
-        "Je suis un développeur full-stack passionné par la création d'applications web modernes et performantes. J'interviens aussi bien sur le front-end que sur le back-end, avec une attention particulière portée à la qualité du code, à la sécurité et à l'expérience utilisateur.",
+        "Je conçois des logiciels de bout en bout, du front-end au back-end. J'accorde une attention particulière à la qualité du code, à la sécurité et à l'expérience utilisateur, autant qu'à l'architecture qui les sous-tend.",
       experience: "+3 ans d'expérience",
       experienceDesc: "Une expérience construite à travers des projets personnels, académiques et professionnels.",
       projects: "Plusieurs projets web réalisés",
@@ -138,10 +138,10 @@ const translations = {
     hero: {
       greeting: "Heyy ! Je suis",
       name: "KPOSSILANDE Géovic",
-      title: "Développeur Full-Stack & Problem Solver",
+      title: "Développeur Full-Stack & aspirant ingénieur logiciel",
       location: "",
       description:
-        "Je conçois et développe des solutions web complètes, des interfaces utilisateur élégantes aux systèmes backend robustes. Je me concentre sur la performance, la sécurité et l'architecture évolutive.",
+        "Je conçois et développe des logiciels fiables, maintenables et évolutifs, de l'interface utilisateur aux systèmes backend. Passionné par la résolution de problèmes, je m'intéresse autant au code qu'à l'architecture, aux performances et à la qualité des solutions que je construis.",
       cta1: "Me contacter",
       cta2: "Voir le portfolio",
     },
@@ -172,7 +172,8 @@ const translations = {
     about: {
       title: "À propos de",
       titleHighlight: "moi",
-      subtitle: "Développeur Full Stack passionné par la création d'applications web modernes et performantes.",
+      subtitle:
+        "Développeur full-stack, de l'interface utilisateur aux systèmes backend. Je m'intéresse autant au code qu'à l'architecture, aux performances et à la qualité.",
       sectionTitle: "Mon Parcours",
       description1:
         "Passionné par le développement web et les nouvelles technologies, je me spécialise dans la création d'applications web modernes utilisant les dernières technologies du marché.",
@@ -306,7 +307,7 @@ const translations = {
     },
     footer: {
       tagline:
-        "Full-Stack developer passionate about building modern, high-performance web applications.",
+        "Full-stack developer passionate about problem-solving and building reliable, maintainable and scalable software.",
       navTitle: "Navigation",
       contactTitle: "Contact",
       rights: "All rights reserved",
@@ -335,7 +336,7 @@ const translations = {
       title: "Who is behind",
       titleHighlight: "this work?",
       description:
-        "I am a full-stack developer passionate about creating modern and high-performance web applications. I work on both front-end and back-end, with special attention to code quality, security, and user experience.",
+        "I build software end to end, from front-end to back-end. I pay close attention to code quality, security and user experience, as much as to the architecture underneath.",
       experience: "+3 years of experience",
       experienceDesc: "Experience built through personal, academic, and professional projects.",
       projects: "Several web projects completed",
@@ -362,10 +363,10 @@ const translations = {
     hero: {
       greeting: "Heyy ! I'm",
       name: "KPOSSILANDE Géovic",
-      title: "Full-Stack Developer & Problem Solver",
+      title: "Full-Stack Developer and aspiring Software Engineer",
       location: "",
       description:
-        "I design and develop complete web solutions, from clean user interfaces to robust backend systems. I focus on performance, security, and scalable architecture.",
+        "I design and develop reliable, maintainable, and scalable software, from user interfaces to backend systems. Passionate about problem-solving, I am equally interested in the code, the architecture, the performance, and the quality of the solutions I build.",
       cta1: "Get in touch",
       cta2: "View portfolio",
     },
@@ -395,7 +396,8 @@ const translations = {
     about: {
       title: "About",
       titleHighlight: "me",
-      subtitle: "Full Stack Developer passionate about creating modern and high-performance web applications.",
+      subtitle:
+        "Full-stack developer, from user interfaces to backend systems. Equally interested in the code, the architecture, the performance and the quality.",
       sectionTitle: "My Journey",
       description1:
         "Passionate about web development and new technologies, I specialize in creating modern web applications using the latest market technologies.",

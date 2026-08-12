@@ -18,13 +18,13 @@ export const siteUrl = resolveSiteUrl()
 
 export const siteConfig = {
   name: "KPOSSILANDE Géovic",
-  jobTitle: "Développeur Full-Stack",
+  jobTitle: "Développeur Full-Stack & aspirant ingénieur logiciel",
   url: siteUrl,
   locale: "fr_FR",
   description:
-    "Développeur full-stack : je conçois et développe des applications web complètes, des interfaces React et Next.js aux API Node.js et Django. Performance, sécurité et architecture évolutive.",
+    "Je conçois et développe des logiciels fiables, maintenables et évolutifs, de l'interface utilisateur aux systèmes backend. React, Next.js, Node.js, Django.",
   descriptionEn:
-    "Full-stack developer: I design and build complete web applications, from React and Next.js interfaces to Node.js and Django APIs. Performance, security and scalable architecture.",
+    "I design and develop reliable, maintainable and scalable software, from user interfaces to backend systems. React, Next.js, Node.js, Django.",
   keywords: [
     "KPOSSILANDE Géovic",
     "développeur full-stack",

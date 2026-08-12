@@ -1,6 +1,5 @@
 "use client"
 
-import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useLanguage } from "@/contexts/language-context"
@@ -10,14 +9,12 @@ export function PortfolioSection() {
 
   const projects = [
     {
-      id: "1",
       title: t("portfolioPreview.project1Title"),
       description: t("portfolioPreview.project1Desc"),
       tag: "Full Stack",
       image: "/modern-ecommerce-interface.png",
     },
     {
-      id: "2",
       title: t("portfolioPreview.project2Title"),
       description: t("portfolioPreview.project2Desc"),
       tag: "Web App",
@@ -52,17 +49,9 @@ export function PortfolioSection() {
                   {project.title}
                 </h3>
 
-                <p className="text-base md:text-[18px] text-[#393939] mb-8 leading-relaxed md:leading-7.5 font-medium">
+                <p className="text-base md:text-[18px] text-[#393939] leading-relaxed md:leading-7.5 font-medium">
                   {project.description}
                 </p>
-
-                <Link
-                  href={`/portfolio/case-study/${project.id}`}
-                  className="flex items-center gap-2 font-semibold text-[#0B0B0B] hover:gap-3 transition-all text-sm md:text-base cursor-pointer"
-                >
-                  {t("portfolioPreview.caseStudy")}
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
               </div>
 
               <div className="relative overflow-hidden min-h-62.5 md:min-h-125">

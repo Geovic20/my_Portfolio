@@ -89,19 +89,6 @@ const translations = {
       linkedin: "Profil LinkedIn",
       github: "Profil GitHub",
     },
-    caseStudy: {
-      back: "Retour au portfolio",
-      people: "personnes",
-      demo: "Voir la démo",
-      code: "Voir le code",
-      technologies: "Technologies utilisées",
-      challenges: "Défis rencontrés",
-      solutions: "Solutions apportées",
-      results: "Résultats obtenus",
-      ctaTitle: "Vous avez un projet similaire ?",
-      ctaDesc: "Discutons de comment je peux vous aider à le réaliser.",
-      ctaButton: "Me contacter",
-    },
     alt: {
       heroAvatar: "Illustration du personnage",
       aboutIllustration: "Illustration à propos",
@@ -263,7 +250,6 @@ const translations = {
       project2Title: "Application de Gestion de Projets",
       project2Desc:
         "Outil de collaboration pour équipes avec tableau Kanban interactif, chat en temps réel et suivi du temps de travail.",
-      caseStudy: "Voir l'étude de cas",
       browseAll: "Voir tout le portfolio",
     },
     experience: {
@@ -313,19 +299,6 @@ const translations = {
       rights: "All rights reserved",
       linkedin: "LinkedIn profile",
       github: "GitHub profile",
-    },
-    caseStudy: {
-      back: "Back to portfolio",
-      people: "people",
-      demo: "View demo",
-      code: "View code",
-      technologies: "Technologies used",
-      challenges: "Challenges faced",
-      solutions: "Solutions provided",
-      results: "Results achieved",
-      ctaTitle: "Have a similar project?",
-      ctaDesc: "Let's discuss how I can help you make it happen.",
-      ctaButton: "Contact me",
     },
     alt: {
       heroAvatar: "Character illustration",
@@ -483,7 +456,6 @@ const translations = {
       project2Title: "Project Management Application",
       project2Desc:
         "Collaboration tool for teams with interactive Kanban board, real-time chat and work time tracking.",
-      caseStudy: "View case study",
       browseAll: "Browse all portfolio",
     },
     experience: {

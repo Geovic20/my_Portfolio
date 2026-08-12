@@ -18,8 +18,7 @@ export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const pathname = usePathname()
 
-  // "/" must match exactly, the others also cover their sub-routes
-  // (e.g. /portfolio/case-study/1 keeps "Portfolio" active).
+  // "/" must match exactly, the others also cover any future sub-route.
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href))
 
   const isContactActive = pathname.startsWith("/contact")

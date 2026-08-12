@@ -507,7 +507,7 @@ const translations = {
       exp4Title: "Web Developer Intern : QCT Technologies",
       exp4Desc:
         "Participation in the development of websites and applications. Learning development best practices, teamwork and using Git for version control.",
-      cta: "See full resume",
+      cta: "Download my resume",
     },
   },
 }

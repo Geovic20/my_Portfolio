@@ -37,6 +37,11 @@ export const siteConfig = {
     "TypeScript",
     "portfolio",
   ],
+  // One CV per language: the download follows the language the visitor is reading.
+  cv: {
+    fr: "/cv-kpossilande-geovic-fr.pdf",
+    en: "/cv-kpossilande-geovic-en.pdf",
+  },
   github: "https://github.com/Geovic20",
   linkedin: "https://www.linkedin.com/in/g%C3%A9ovic-kpossilande-1b0367292/",
 } as const

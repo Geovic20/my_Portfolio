@@ -4,9 +4,10 @@ import { FileText } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { useLanguage } from "@/contexts/language-context"
+import { siteConfig } from "@/lib/site"
 
 export function ExperienceSection() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   const experiences = [
     {
@@ -35,16 +36,6 @@ export function ExperienceSection() {
     },
   ]
 
-  const handleDownloadCV = () => {
-    // Create a link to download the CV
-    const link = document.createElement("a")
-    link.href = "/cv-kpossilande-geovic.pdf"
-    link.download = "CV-KPOSSILANDE-Geovic.pdf"
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
-
   return (
     <section className="bg-black py-16 md:py-24">
       <div className="container mx-auto px-4">
@@ -57,12 +48,20 @@ export function ExperienceSection() {
             <p className="text-gray-400 mb-8 md:mb-10 leading-relaxed text-base md:text-lg">
               {t("experience.description")}
             </p>
+            {/* A real anchor rather than a scripted click: right-click "save as",
+                middle-click and keyboard activation all work, and it survives a
+                JavaScript failure. */}
             <Button
-              onClick={handleDownloadCV}
+              asChild
               className="bg-white text-black hover:bg-gray-50 rounded-lg py-5 px-8 md:py-5.5 md:px-15.5 text-base md:text-lg font-semibold h-auto w-full sm:w-auto sm:min-w-60"
             >
-              <FileText className="w-5 h-5" />
-              {t("experience.cta")}
+              <a
+                href={siteConfig.cv[language]}
+                download={`CV-KPOSSILANDE-Geovic-${language.toUpperCase()}.pdf`}
+              >
+                <FileText className="w-5 h-5" />
+                {t("experience.cta")}
+              </a>
             </Button>
           </div>
 

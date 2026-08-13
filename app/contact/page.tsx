@@ -5,22 +5,24 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
+import { siteConfig } from "@/lib/site"
 import Link from "next/link"
 
 export default function ContactPage() {
   const { t } = useLanguage()
 
+  // URLs sourced from siteConfig so a profile change is a one-line edit.
   const socialLinks = [
     {
       name: "LinkedIn",
       icon: Linkedin,
-      url: "https://www.linkedin.com/in/g%C3%A9ovic-kpossilande-1b0367292/",
+      url: siteConfig.linkedin,
       color: "bg-[#0077B5]",
     },
     {
       name: "GitHub",
       icon: Github,
-      url: "https://github.com/Geovic20",
+      url: siteConfig.github,
       color: "bg-[#333333]",
     },
   ]
@@ -63,7 +65,7 @@ export default function ContactPage() {
 
             {/* Email */}
             <a
-              href="mailto:kpossilandegeovic68@gmail.com"
+              href="mailto:contact@geovickpossilande.com"
               className="group bg-white border-3 md:border-4 border-black rounded-xl md:rounded-2xl p-5 md:p-8 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-200"
             >
               <div className="flex items-start gap-3 md:gap-4">
@@ -73,7 +75,7 @@ export default function ContactPage() {
                 <div className="flex-1 min-w-0">
                   <h3 className="text-xl md:text-2xl font-bold mb-1 md:mb-2">Email</h3>
                   <p className="text-[#393939] mb-2 md:mb-3 text-sm md:text-base">{t("contact.emailDesc")}</p>
-                  <p className="font-mono font-bold text-sm md:text-lg break-all">kpossilandegeovic68@gmail.com</p>
+                  <p className="font-mono font-bold text-sm md:text-lg break-all">contact@geovickpossilande.com</p>
                 </div>
               </div>
             </a>

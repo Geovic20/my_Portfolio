@@ -43,5 +43,5 @@ export const siteConfig = {
     en: "/cv-kpossilande-geovic-en.pdf",
   },
   github: "https://github.com/Geovic20",
-  linkedin: "https://www.linkedin.com/in/g%C3%A9ovic-kpossilande-1b0367292/",
+  linkedin: "https://www.linkedin.com/in/g%C3%A9ovic-kpossilande-00a31a30b/",
 } as const

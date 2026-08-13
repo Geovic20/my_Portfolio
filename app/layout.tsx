@@ -6,6 +6,7 @@ import { Onest } from "next/font/google"
 import { LanguageProvider } from "@/contexts/language-context"
 import { IntroLoader } from "@/components/intro-loader"
 import { siteConfig, siteUrl } from "@/lib/site"
+import { Analytics } from "@vercel/analytics/next"
 
 // Initialize Onest font with weights 500 and 700
 const onest = Onest({
@@ -66,6 +67,9 @@ export default function RootLayout({
         <LanguageProvider>
           <IntroLoader>{children}</IntroLoader>
         </LanguageProvider>
+        {/* Injects the tracking beacon only on Vercel deployments; it is inert
+            locally and adds nothing to the page in development. */}
+        <Analytics />
       </body>
     </html>
   )

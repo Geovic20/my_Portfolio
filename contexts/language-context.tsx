@@ -216,19 +216,6 @@ const translations = {
       titleHighlight: "Portfolio",
       subtitle:
         "Découvrez une sélection de mes projets récents qui démontrent mes compétences en développement web full stack.",
-      project1Title: "E-Commerce Platform",
-      project1Desc: "Une plateforme e-commerce complète avec panier, paiement en ligne et gestion des commandes.",
-      project2Title: "Application de Gestion de Projets",
-      project2Desc: "Outil de collaboration pour équipes avec tableau Kanban, chat en temps réel et suivi du temps.",
-      project3Title: "Portfolio Photographe",
-      project3Desc: "Site vitrine élégant avec galerie d'images, formulaire de contact et système de réservation.",
-      project4Title: "API REST Microservices",
-      project4Desc:
-        "Architecture microservices avec authentification JWT, gestion des utilisateurs et documentation Swagger.",
-      project5Title: "Application Mobile Fitness",
-      project5Desc: "Application de suivi d'entraînement avec statistiques, objectifs personnalisés et partage social.",
-      project6Title: "Dashboard Analytics",
-      project6Desc: "Tableau de bord interactif avec graphiques en temps réel, filtres avancés et export de données.",
       demo: "Démo",
       code: "Code",
       ctaTitle: "Vous avez un projet en tête ?",
@@ -244,12 +231,6 @@ const translations = {
     portfolioPreview: {
       title: "Jetez un œil à mon",
       titleHighlight: "portfolio",
-      project1Title: "Plateforme E-Commerce",
-      project1Desc:
-        "Développement complet d'une plateforme e-commerce avec gestion du panier, paiement sécurisé et système de gestion des commandes.",
-      project2Title: "Application de Gestion de Projets",
-      project2Desc:
-        "Outil de collaboration pour équipes avec tableau Kanban interactif, chat en temps réel et suivi du temps de travail.",
       browseAll: "Voir tout le portfolio",
     },
     experience: {
@@ -422,19 +403,6 @@ const translations = {
       title: "My",
       titleHighlight: "Portfolio",
       subtitle: "Discover a selection of my recent projects that demonstrate my full stack web development skills.",
-      project1Title: "E-Commerce Platform",
-      project1Desc:
-        "A complete e-commerce platform with shopping cart management, secure payment and order management system.",
-      project2Title: "Project Management Application",
-      project2Desc: "Collaboration tool for teams with Kanban board, real-time chat and time tracking.",
-      project3Title: "Photographer Portfolio",
-      project3Desc: "Elegant showcase website with image gallery, contact form and booking system.",
-      project4Title: "REST API Microservices",
-      project4Desc: "Microservices architecture with JWT authentication, user management and Swagger documentation.",
-      project5Title: "Fitness Mobile App",
-      project5Desc: "Workout tracking application with statistics, personalized goals and social sharing.",
-      project6Title: "Analytics Dashboard",
-      project6Desc: "Interactive dashboard with real-time charts, advanced filters and data export.",
       demo: "Demo",
       code: "Code",
       ctaTitle: "Have a project in mind?",
@@ -450,12 +418,6 @@ const translations = {
     portfolioPreview: {
       title: "Take a look at my",
       titleHighlight: "portfolio",
-      project1Title: "E-Commerce Platform",
-      project1Desc:
-        "Complete development of an e-commerce platform with shopping cart management, secure payment and order management system.",
-      project2Title: "Project Management Application",
-      project2Desc:
-        "Collaboration tool for teams with interactive Kanban board, real-time chat and work time tracking.",
       browseAll: "Browse all portfolio",
     },
     experience: {

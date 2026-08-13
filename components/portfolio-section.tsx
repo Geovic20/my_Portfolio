@@ -3,24 +3,12 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useLanguage } from "@/contexts/language-context"
+import { featuredProjects, localizeProject } from "@/lib/projects"
 
 export function PortfolioSection() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
-  const projects = [
-    {
-      title: t("portfolioPreview.project1Title"),
-      description: t("portfolioPreview.project1Desc"),
-      tag: "Full Stack",
-      image: "/modern-ecommerce-interface.png",
-    },
-    {
-      title: t("portfolioPreview.project2Title"),
-      description: t("portfolioPreview.project2Desc"),
-      tag: "Web App",
-      image: "/project-management-dashboard.png",
-    },
-  ]
+  const projects = featuredProjects.map((project) => localizeProject(project, language))
 
   return (
     <section className="container mx-auto px-4 py-16 md:py-24">
@@ -35,9 +23,9 @@ export function PortfolioSection() {
         </div>
 
         <div className="space-y-8 mb-12">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <div
-              key={index}
+              key={project.slug}
               className="group grid md:grid-cols-2 bg-white border-[3px] border-black rounded-4xl overflow-hidden hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all"
             >
               <div className="p-6 md:p-12 flex flex-col justify-center bg-white">

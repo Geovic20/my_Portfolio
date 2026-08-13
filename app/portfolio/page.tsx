@@ -7,72 +7,12 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/contexts/language-context"
+import { projects, localizeProject } from "@/lib/projects"
 
 export default function PortfolioPage() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
-  const projects = [
-    {
-      id: 1,
-      title: t("portfolio.project1Title"),
-      description: t("portfolio.project1Desc"),
-      image: "/modern-ecommerce-interface.png",
-      technologies: ["React.js", "Node.js", "MongoDB", "Stripe"],
-      bgColor: "#2F81F7",
-      demoUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      id: 2,
-      title: t("portfolio.project2Title"),
-      description: t("portfolio.project2Desc"),
-      image: "/project-management-dashboard.png",
-      technologies: ["Next.js", "Python", "Django", "WebSocket"],
-      bgColor: "#FF6B6B",
-      demoUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      id: 3,
-      title: t("portfolio.project3Title"),
-      description: t("portfolio.project3Desc"),
-      image: "/photography-portfolio.png",
-      technologies: ["Next.js", "Tailwind CSS", "Vercel"],
-      bgColor: "#6366F1",
-      demoUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      id: 4,
-      title: t("portfolio.project4Title"),
-      description: t("portfolio.project4Desc"),
-      image: "/api-microservices-architecture-diagram.jpg",
-      technologies: ["Node.js", "Docker", "PostgreSQL", "Redis"],
-      bgColor: "#FFD93D",
-      demoUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      id: 5,
-      title: t("portfolio.project5Title"),
-      description: t("portfolio.project5Desc"),
-      image: "/fitness-app-interface.png",
-      technologies: ["React Native", "Firebase", "Node.js"],
-      bgColor: "#10B981",
-      demoUrl: "#",
-      githubUrl: "#",
-    },
-    {
-      id: 6,
-      title: t("portfolio.project6Title"),
-      description: t("portfolio.project6Desc"),
-      image: "/analytics-dashboard.png",
-      technologies: ["React.js", "D3.js", "Java", "MySQL"],
-      bgColor: "#F59E0B",
-      demoUrl: "#",
-      githubUrl: "#",
-    },
-  ]
+
 
   return (
     <main className="min-h-screen bg-[#FFFFFF]">
@@ -97,15 +37,17 @@ export default function PortfolioPage() {
       <section className="container mx-auto px-4 py-12 md:py-16">
         <div className="max-w-7xl mx-auto">
           <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
-            {projects.map((project) => (
+            {projects.map((raw) => {
+              const project = localizeProject(raw, language)
+              return (
               <div
-                key={project.id}
+                key={project.slug}
                 className="bg-white border-3 md:border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 md:hover:-translate-x-1 md:hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all"
               >
                 {/* Project Image */}
                 <div
                   className="relative h-48 sm:h-56 md:h-64 border-b-3 md:border-b-4 border-black overflow-hidden"
-                  style={{ backgroundColor: project.bgColor }}
+                  style={{ backgroundColor: project.accent }}
                 >
                   <Image
                     src={project.image || "/placeholder.svg"}
@@ -133,31 +75,38 @@ export default function PortfolioPage() {
                     ))}
                   </div>
 
-                  {/* Action Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-2">
-                    <Button
-                      asChild
-                      className="flex-1 bg-black text-white hover:bg-black/90 border-2 border-black h-11 sm:h-12 font-bold text-sm sm:text-base"
-                    >
-                      <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        {t("portfolio.demo")}
-                      </a>
-                    </Button>
-                    <Button
-                      asChild
-                      variant="outline"
-                      className="flex-1 border-2 border-black h-11 sm:h-12 font-bold hover:bg-black hover:text-white bg-transparent text-sm sm:text-base"
-                    >
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-4 h-4 mr-2" />
-                        {t("portfolio.code")}
-                      </a>
-                    </Button>
-                  </div>
+                  {/* Un bouton n'est rendu que si l'URL existe : pas de lien mort. */}
+                  {(project.demoUrl || project.githubUrl) && (
+                    <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 pt-2">
+                      {project.demoUrl && (
+                        <Button
+                          asChild
+                          className="flex-1 bg-black text-white hover:bg-black/90 border-2 border-black h-11 sm:h-12 font-bold text-sm sm:text-base"
+                        >
+                          <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            {t("portfolio.demo")}
+                          </a>
+                        </Button>
+                      )}
+                      {project.githubUrl && (
+                        <Button
+                          asChild
+                          variant="outline"
+                          className="flex-1 border-2 border-black h-11 sm:h-12 font-bold hover:bg-black hover:text-white bg-transparent text-sm sm:text-base"
+                        >
+                          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                            <Github className="w-4 h-4 mr-2" />
+                            {t("portfolio.code")}
+                          </a>
+                        </Button>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>

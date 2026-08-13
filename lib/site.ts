@@ -42,6 +42,8 @@ export const siteConfig = {
     fr: "/cv-kpossilande-geovic-fr.pdf",
     en: "/cv-kpossilande-geovic-en.pdf",
   },
+  email: "contact@geovickpossilande.com",
+  phone: { display: "+229 01 90 83 50 05", tel: "+2290190835005", whatsapp: "2290190835005" },
   github: "https://github.com/Geovic20",
   linkedin: "https://www.linkedin.com/in/g%C3%A9ovic-kpossilande-00a31a30b/",
 } as const

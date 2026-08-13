@@ -46,7 +46,7 @@ export default function ContactPage() {
           <div className="grid sm:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
             {/* WhatsApp */}
             <a
-              href="https://wa.me/2290190835005"
+              href={`https://wa.me/${siteConfig.phone.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-white border-3 md:border-4 border-black rounded-xl md:rounded-2xl p-5 md:p-8 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-200"
@@ -58,14 +58,14 @@ export default function ContactPage() {
                 <div className="flex-1 min-w-0">
                   <h3 className="text-xl md:text-2xl font-bold mb-1 md:mb-2">WhatsApp</h3>
                   <p className="text-[#393939] mb-2 md:mb-3 text-sm md:text-base">{t("contact.whatsappDesc")}</p>
-                  <p className="font-mono font-bold text-sm md:text-lg break-all">+229 01 90 83 50 05</p>
+                  <p className="font-mono font-bold text-sm md:text-lg break-all">{siteConfig.phone.display}</p>
                 </div>
               </div>
             </a>
 
             {/* Email */}
             <a
-              href="mailto:contact@geovickpossilande.com"
+              href={`mailto:${siteConfig.email}`}
               className="group bg-white border-3 md:border-4 border-black rounded-xl md:rounded-2xl p-5 md:p-8 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-200"
             >
               <div className="flex items-start gap-3 md:gap-4">
@@ -75,7 +75,7 @@ export default function ContactPage() {
                 <div className="flex-1 min-w-0">
                   <h3 className="text-xl md:text-2xl font-bold mb-1 md:mb-2">Email</h3>
                   <p className="text-[#393939] mb-2 md:mb-3 text-sm md:text-base">{t("contact.emailDesc")}</p>
-                  <p className="font-mono font-bold text-sm md:text-lg break-all">contact@geovickpossilande.com</p>
+                  <p className="font-mono font-bold text-sm md:text-lg break-all">{siteConfig.email}</p>
                 </div>
               </div>
             </a>

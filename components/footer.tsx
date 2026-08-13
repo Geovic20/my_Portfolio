@@ -67,16 +67,19 @@ export function Footer() {
                 <li className="flex items-center gap-2">
                   <Mail className="w-4 h-4 shrink-0" />
                   <a
-                    href="mailto:kpossilandegeovic68@gmail.com"
+                    href={`mailto:${siteConfig.email}`}
                     className="hover:text-white transition-colors break-all cursor-pointer"
                   >
-                    kpossilandegeovic68@gmail.com
+                    {siteConfig.email}
                   </a>
                 </li>
                 <li className="flex items-center gap-2">
                   <Phone className="w-4 h-4 shrink-0" />
-                  <a href="tel:+2290190835005" className="hover:text-white transition-colors cursor-pointer">
-                    +229 01 90 83 50 05
+                  <a
+                    href={`tel:${siteConfig.phone.tel}`}
+                    className="hover:text-white transition-colors cursor-pointer"
+                  >
+                    {siteConfig.phone.display}
                   </a>
                 </li>
               </ul>

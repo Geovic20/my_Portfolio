@@ -23,13 +23,30 @@ export type Project = {
   demoUrl?: string
 }
 
-// ⚠️ CONTENU PROVISOIRE — projets d'exemple, à remplacer par les vrais.
 // Pour ajouter un projet : copier un bloc, remplir les champs, c'est tout.
 // Les deux pages (accueil et /portfolio) en dérivent automatiquement.
+//
+// ⚠️ Les projets marqués PROVISOIRE ci-dessous sont des exemples restants,
+// à remplacer au fur et à mesure.
 export const projects: Project[] = [
   {
-    slug: "e-commerce",
+    slug: "portfolio-cecile-goudou",
     featured: true,
+    titleFr: "Portfolio journaliste",
+    titleEn: "Journalist portfolio",
+    descFr: "Portfolio élégant avec galerie d'images de Cécile Goudou, journaliste et reporter d'images.",
+    descEn: "Elegant portfolio with image gallery by Cécile Goudou, journalist and photojournalist.",
+    tagFr: "Portfolio",
+    tagEn: "Portfolio",
+    technologies: ["React.js", "Tailwind CSS", "Vite"],
+    image: "/cecile_portfolio.png",
+    accent: "#6366F1",
+    demoUrl: "https://www.cecilegoudou.com",
+    githubUrl: "https://github.com/Mario-sh/portfolio-de-c-cile-GOUDOU", // githubUrl : dépôt inaccessible publiquement (404) — à réactiver s'il devient public.
+  },
+  // PROVISOIRE
+  {
+    slug: "e-commerce",
     titleFr: "E-Commerce Platform",
     titleEn: "E-Commerce Platform",
     descFr: "Une plateforme e-commerce complète avec panier, paiement en ligne et gestion des commandes.",
@@ -54,18 +71,7 @@ export const projects: Project[] = [
     image: "/project-management-dashboard.png",
     accent: "#FF6B6B",
   },
-  {
-    slug: "portfolio-photographe",
-    titleFr: "Portfolio Photographe",
-    titleEn: "Photographer Portfolio",
-    descFr: "Site vitrine élégant avec galerie d'images, formulaire de contact et système de réservation.",
-    descEn: "Elegant showcase website with image gallery, contact form and booking system.",
-    tagFr: "Site vitrine",
-    tagEn: "Showcase",
-    technologies: ["Next.js", "Tailwind CSS", "Vercel"],
-    image: "/photography-portfolio.png",
-    accent: "#6366F1",
-  },
+  // PROVISOIRE
   {
     slug: "api-microservices",
     titleFr: "API REST Microservices",

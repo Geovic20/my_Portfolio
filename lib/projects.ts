@@ -26,8 +26,8 @@ export type Project = {
 // Pour ajouter un projet : copier un bloc, remplir les champs, c'est tout.
 // Les deux pages (accueil et /portfolio) en dérivent automatiquement.
 //
-// ⚠️ Les projets marqués PROVISOIRE ci-dessous sont des exemples restants,
-// à remplacer au fur et à mesure.
+// Les vrais projets sont en tête ; les exemples restants sont regroupés
+// en fin de liste, sous un séparateur.
 export const projects: Project[] = [
   {
     slug: "portfolio-cecile-goudou",
@@ -44,23 +44,26 @@ export const projects: Project[] = [
     demoUrl: "https://www.cecilegoudou.com",
     githubUrl: "https://github.com/Mario-sh/portfolio-de-c-cile-GOUDOU", // githubUrl : dépôt inaccessible publiquement (404) — à réactiver s'il devient public.
   },
-  // PROVISOIRE
   {
-    slug: "e-commerce",
-    titleFr: "E-Commerce Platform",
-    titleEn: "E-Commerce Platform",
-    descFr: "Une plateforme e-commerce complète avec panier, paiement en ligne et gestion des commandes.",
+    slug: "gc-tech",
+    featured: true,
+    titleFr: "Plateforme de commerce électronique",
+    titleEn: "E-commerce platform",
+    descFr:
+      "G&C Tech est une plateforme d'e-commerce haut de gamme et performante pour la vente d'électronique, développée avec les dernières technologies web modernes.",
     descEn:
-      "A complete e-commerce platform with shopping cart management, secure payment and order management system.",
-    tagFr: "Full Stack",
-    tagEn: "Full Stack",
-    technologies: ["React.js", "Node.js", "MongoDB", "Stripe"],
-    image: "/modern-ecommerce-interface.png",
+      "G&C Tech is a high-end, high-performance e-commerce platform for selling electronics, developed with the latest modern web technologies.",
+    tagFr: "Plateforme e-commerce",
+    tagEn: "E-commerce platform",
+    technologies: ["React", "Tailwind CSS", "Motion", "FedaPay", "Supabase"],
+    image: "/gc-tech.png",
     accent: "#2F81F7",
+    githubUrl: "https://github.com/Geovic20/G-C-Tech",
+    demoUrl: "https://gc-tech-xi.vercel.app",
   },
+  // ───── À PARTIR D'ICI : exemples provisoires, à remplacer ─────
   {
     slug: "gestion-projets",
-    featured: true,
     titleFr: "Application de Gestion de Projets",
     titleEn: "Project Management Application",
     descFr: "Outil de collaboration pour équipes avec tableau Kanban, chat en temps réel et suivi du temps.",
@@ -71,7 +74,6 @@ export const projects: Project[] = [
     image: "/project-management-dashboard.png",
     accent: "#FF6B6B",
   },
-  // PROVISOIRE
   {
     slug: "api-microservices",
     titleFr: "API REST Microservices",

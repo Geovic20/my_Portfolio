@@ -61,6 +61,22 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Geovic20/G-C-Tech",
     demoUrl: "https://gc-tech-xi.vercel.app",
   },
+  {
+    slug: "portfolio-personnel",
+    titleFr: "Portfolio développeur web",
+    titleEn: "Web developer portfolio",
+    descFr:
+      "Portfolio moderne, ludique et haut de gamme, conçu avec une esthétique néo-brutaliste (style dessin/papier). Il se distingue par des contrastes élevés, des bordures noires affirmées, des ombres géométriques plates et une colorimétrie dynamique.",
+    descEn:
+      "A modern, playful and high-end portfolio, designed with a neo-brutalist aesthetic (drawing/paper style). It stands out through high contrast, bold black borders, flat geometric shadows and dynamic colours.",
+    tagFr: "Portfolio",
+    tagEn: "Portfolio",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    image: "/neo-brutalist.png",
+    accent: "#6366F1",
+    githubUrl: "https://github.com/Geovic20/my_Portfolio",
+    demoUrl: "https://geovickpossilande.com",
+  },
   // ───── À PARTIR D'ICI : exemples provisoires, à remplacer ─────
   {
     slug: "gestion-projets",
@@ -98,18 +114,6 @@ export const projects: Project[] = [
     technologies: ["React Native", "Firebase", "Node.js"],
     image: "/fitness-app-interface.png",
     accent: "#10B981",
-  },
-  {
-    slug: "dashboard-analytics",
-    titleFr: "Dashboard Analytics",
-    titleEn: "Analytics Dashboard",
-    descFr: "Tableau de bord interactif avec graphiques en temps réel, filtres avancés et export de données.",
-    descEn: "Interactive dashboard with real-time charts, advanced filters and data export.",
-    tagFr: "Data",
-    tagEn: "Data",
-    technologies: ["React.js", "D3.js", "Java", "MySQL"],
-    image: "/analytics-dashboard.png",
-    accent: "#F59E0B",
   },
 ]
 

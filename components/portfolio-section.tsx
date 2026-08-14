@@ -57,7 +57,7 @@ export function PortfolioSection() {
 
         <div className="flex justify-center">
           <Link
-            href="/portfolio"
+            href="/projects"
             className="bg-black text-white px-6 md:px-8 py-4 md:py-5 rounded-[12px] font-semibold hover:bg-gray-900 transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-sm md:text-base cursor-pointer"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

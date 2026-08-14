@@ -69,7 +69,7 @@ const translations = {
     nav: {
       home: "Accueil",
       about: "À propos",
-      portfolio: "Portfolio",
+      projects: "Projets",
       contact: "Contact",
     },
     home: {
@@ -110,7 +110,7 @@ const translations = {
       description:
         "Le lien est peut-être cassé, ou la page a été déplacée. Pas de panique : tout le reste du site est à un clic d'ici.",
       backHome: "Retour à l'accueil",
-      viewPortfolio: "Voir le portfolio",
+      viewPortfolio: "Explorer mes projets",
     },
     contact: {
       title: "Me",
@@ -130,7 +130,7 @@ const translations = {
       description:
         "Je conçois et développe des logiciels fiables, maintenables et évolutifs, de l'interface utilisateur aux systèmes backend. Passionné par la résolution de problèmes, je m'intéresse autant au code qu'à l'architecture, aux performances et à la qualité des solutions que je construis.",
       cta1: "Me contacter",
-      cta2: "Voir le portfolio",
+      cta2: "Explorer mes projets",
     },
     services: {
       title: "Mes services de",
@@ -261,7 +261,7 @@ const translations = {
     nav: {
       home: "Home",
       about: "About",
-      portfolio: "Portfolio",
+      projects: "Projects",
       contact: "Contact",
     },
     home: {
@@ -302,7 +302,7 @@ const translations = {
       description:
         "The link may be broken, or the page has moved. No worries: the rest of the site is one click away.",
       backHome: "Back to home",
-      viewPortfolio: "View portfolio",
+      viewPortfolio: "explore my projects",
     },
     contact: {
       title: "Get in",
@@ -322,7 +322,7 @@ const translations = {
       description:
         "I design and develop reliable, maintainable, and scalable software, from user interfaces to backend systems. Passionate about problem-solving, I am equally interested in the code, the architecture, the performance, and the quality of the solutions I build.",
       cta1: "Get in touch",
-      cta2: "View portfolio",
+      cta2: "Explore my projects",
     },
     services: {
       title: "My web development",

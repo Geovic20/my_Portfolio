@@ -13,27 +13,27 @@ export function ServicesSection() {
     {
       title: t("services.service1Title"),
       description: t("services.service1Desc"),
-      image: "/images/web-design.svg",
+      image: "/images/service1.svg",
     },
     {
       title: t("services.service2Title"),
       description: t("services.service2Desc"),
-      image: "/images/ui-ux-design.svg",
+      image: "/images/service2.svg",
     },
     {
       title: t("services.service3Title"),
       description: t("services.service3Desc"),
-      image: "/images/product-design.svg",
+      image: "/images/service3.svg",
     },
     {
       title: t("services.service4Title"),
       description: t("services.service4Desc"),
-      image: "/images/user-research.svg",
+      image: "/images/service4.svg",
     },
     {
       title: t("services.service5Title"),
       description: t("services.service5Desc"),
-      image: "/images/motion-graphics.svg",
+      image: "/images/service5.svg",
     },
   ]
 

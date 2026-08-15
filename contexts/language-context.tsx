@@ -69,7 +69,7 @@ const translations = {
     nav: {
       home: "Accueil",
       about: "À propos",
-      portfolio: "Portfolio",
+      projects: "Projets",
       contact: "Contact",
     },
     home: {
@@ -110,7 +110,7 @@ const translations = {
       description:
         "Le lien est peut-être cassé, ou la page a été déplacée. Pas de panique : tout le reste du site est à un clic d'ici.",
       backHome: "Retour à l'accueil",
-      viewPortfolio: "Voir le portfolio",
+      viewPortfolio: "Explorer mes projets",
     },
     contact: {
       title: "Me",
@@ -130,27 +130,27 @@ const translations = {
       description:
         "Je conçois et développe des logiciels fiables, maintenables et évolutifs, de l'interface utilisateur aux systèmes backend. Passionné par la résolution de problèmes, je m'intéresse autant au code qu'à l'architecture, aux performances et à la qualité des solutions que je construis.",
       cta1: "Me contacter",
-      cta2: "Voir le portfolio",
+      cta2: "Explorer mes projets",
     },
     services: {
       title: "Mes services de",
       titleHighlight: "développement web",
       subtitle: "Je propose des solutions complètes pour vos projets web, du front-end au back-end.",
-      service1Title: "Développement Front-End",
+      service1Title: "Applications web",
       service1Desc:
-        "Création d'interfaces utilisateur modernes et réactives avec React, Next.js et Tailwind CSS pour une expérience utilisateur optimale.",
-      service2Title: "Développement Back-End",
+        "Création d'applications web complètes, de l'interface utilisateur aux systèmes backend.",
+      service2Title: "APIs & Backend",
       service2Desc:
-        "Conception d'API REST robustes et de systèmes serveur avec Node.js, Python (Django) ou Java pour des applications performantes.",
-      service3Title: "Applications Full Stack",
+        "APIs REST robustes, authentification, gestion des données et intégration de services.",
+      service3Title: "Architecture logicielle",
       service3Desc:
-        "Développement complet d'applications web de bout en bout, de la conception à la mise en production avec les technologies modernes.",
-      service4Title: "Intégration de Bases de Données",
+        "Conception de systèmes maintenables, modulaires et capables d'évoluer avec les besoins.",
+      service4Title: "Applications basées sur l'IA",
       service4Desc:
-        "Conception et optimisation de bases de données SQL avec migrations, requêtes performantes et gestion sécurisée des données.",
+        "Intégration de modèles et services d'IA dans des applications concrètes.",
       service5Title: "DevOps & Déploiement",
       service5Desc:
-        "Conteneurisation avec Docker, intégration continue (CI/CD) et déploiement d'applications sur des serveurs cloud.",
+        "Conteneurisation, CI/CD et déploiement d'applications.",
       ctaTitle: "Me contacter",
       ctaDesc:
         "Vous avez besoin d'un autre service ? Contactez-moi, il y a de fortes chances que je puisse vous aider !",
@@ -261,7 +261,7 @@ const translations = {
     nav: {
       home: "Home",
       about: "About",
-      portfolio: "Portfolio",
+      projects: "Projects",
       contact: "Contact",
     },
     home: {
@@ -302,7 +302,7 @@ const translations = {
       description:
         "The link may be broken, or the page has moved. No worries: the rest of the site is one click away.",
       backHome: "Back to home",
-      viewPortfolio: "View portfolio",
+      viewPortfolio: "explore my projects",
     },
     contact: {
       title: "Get in",
@@ -322,27 +322,27 @@ const translations = {
       description:
         "I design and develop reliable, maintainable, and scalable software, from user interfaces to backend systems. Passionate about problem-solving, I am equally interested in the code, the architecture, the performance, and the quality of the solutions I build.",
       cta1: "Get in touch",
-      cta2: "View portfolio",
+      cta2: "Explore my projects",
     },
     services: {
       title: "My web development",
       titleHighlight: "services",
       subtitle: "I offer complete solutions for your web projects, from front-end to back-end.",
-      service1Title: "Front-End Development",
+      service1Title: "Web Applications",
       service1Desc:
-        "Creating modern and responsive user interfaces with React, Next.js and Tailwind CSS for an optimal user experience.",
-      service2Title: "Back-End Development",
+        "Complete applications, from the user interface to the backend systems.",
+      service2Title: "APIs and Backend",
       service2Desc:
-        "Designing robust REST APIs and server systems with Node.js, Python (Django) or Java for high-performance applications.",
-      service3Title: "Full Stack Applications",
+        "Robust REST APIs, authentication, data management and service integration.",
+      service3Title: "Software architecture",
       service3Desc:
-        "Complete end-to-end web application development, from design to production deployment with modern technologies.",
-      service4Title: "Database Integration",
+        "Design of maintainable, modular systems capable of evolving with needs.",
+      service4Title: "AI-Powered Applications",
       service4Desc:
-        "Designing and optimizing SQL databases with migrations, efficient queries and secure data management.",
+        "Integration of AI and machine learning models to enhance user experience and application performance.",
       service5Title: "DevOps & Deployment",
       service5Desc:
-        "Containerization with Docker, continuous integration (CI/CD) and application deployment on cloud servers.",
+        "Containerization, CI/CD and application deployment.",
       ctaTitle: "Get in touch",
       ctaDesc: "Looking for another service? Get in touch with me, there is a high chance that I will be able to help!",
       ctaButton: "Get in touch",

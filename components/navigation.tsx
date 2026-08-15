@@ -10,7 +10,7 @@ import { useState } from "react"
 const navLinks = [
   { href: "/", labelKey: "nav.home" },
   { href: "/about", labelKey: "nav.about" },
-  { href: "/portfolio", labelKey: "nav.portfolio" },
+  { href: "/portfolio", labelKey: "nav.projects" },
 ]
 
 export function Navigation() {

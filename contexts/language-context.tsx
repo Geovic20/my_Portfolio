@@ -75,11 +75,6 @@ const translations = {
     home: {
       stackTitle: "STACK TECHNOLOGIQUE",
     },
-    carousel: {
-      label: "Stack technologique",
-      previous: "Technologie précédente",
-      next: "Technologie suivante",
-    },
     footer: {
       tagline:
         "Développeur full-stack passionné par la résolution de problèmes et la conception de logiciels fiables, maintenables et évolutifs.",
@@ -266,11 +261,6 @@ const translations = {
     },
     home: {
       stackTitle: "TECH STACK",
-    },
-    carousel: {
-      label: "Tech stack",
-      previous: "Previous technology",
-      next: "Next technology",
     },
     footer: {
       tagline:

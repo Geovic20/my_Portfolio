@@ -59,13 +59,16 @@ export function ServicesSection() {
                 key={index}
                 className="bg-white border-[3px] border-black rounded-3xl md:rounded-4xl overflow-hidden hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] transition-all duration-300 min-h-105 sm:min-h-120 flex flex-col group"
               >
+                {/* Ratio choisi proche de celui des illustrations (1,25 à 1,78)
+                    pour limiter les bandes vides ; object-contain garantit qu'aucune
+                    n'est rognée quel que soit son format. */}
                 <div className="mb-4 sm:mb-6 -mx-0.75 -mt-0.75 overflow-hidden rounded-t-[21px] md:rounded-t-[29px]">
                   <Image
                     src={service.image || "/placeholder.svg"}
                     alt={service.title}
                     width={382}
-                    height={328}
-                    className="w-full h-auto rounded-t-[21px] md:rounded-t-[29px] group-hover:scale-110 transition-transform duration-500 ease-out"
+                    height={263}
+                    className="w-full aspect-[382/263] object-contain rounded-t-[21px] md:rounded-t-[29px] group-hover:scale-110 transition-transform duration-500 ease-out"
                   />
                 </div>
                 <div className="px-5 sm:px-6 md:px-8 pb-6 sm:pb-8 flex-1 flex flex-col">

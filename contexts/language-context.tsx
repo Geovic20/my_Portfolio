@@ -77,7 +77,7 @@ const translations = {
     },
     footer: {
       tagline:
-        "Développeur full-stack passionné par la résolution de problèmes et la conception de logiciels fiables, maintenables et évolutifs.",
+        "Développeur Full-Stack & aspirant ingénieur logiciel. Je construis des logiciels fiables, maintenables et évolutifs.",
       navTitle: "Navigation",
       contactTitle: "Contact",
       rights: "Tous droits réservés",
@@ -251,7 +251,7 @@ const translations = {
     },
     footer: {
       tagline:
-        "Full-stack developer passionate about problem-solving and building reliable, maintainable and scalable software.",
+        "Full-Stack developer & aspiring software engineer. I build reliable, maintainable and scalable software.",
       navTitle: "Navigation",
       contactTitle: "Contact",
       rights: "All rights reserved",

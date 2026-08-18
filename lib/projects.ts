@@ -77,44 +77,6 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Geovic20/my_Portfolio",
     demoUrl: "https://geovickpossilande.com",
   },
-  // ───── À PARTIR D'ICI : exemples provisoires, à remplacer ─────
-  {
-    slug: "gestion-projets",
-    titleFr: "Application de Gestion de Projets",
-    titleEn: "Project Management Application",
-    descFr: "Outil de collaboration pour équipes avec tableau Kanban, chat en temps réel et suivi du temps.",
-    descEn: "Collaboration tool for teams with Kanban board, real-time chat and time tracking.",
-    tagFr: "Application web",
-    tagEn: "Web App",
-    technologies: ["Next.js", "Python", "Django", "WebSocket"],
-    image: "/project-management-dashboard.png",
-    accent: "#FF6B6B",
-  },
-  {
-    slug: "api-microservices",
-    titleFr: "API REST Microservices",
-    titleEn: "REST API Microservices",
-    descFr:
-      "Architecture microservices avec authentification JWT, gestion des utilisateurs et documentation Swagger.",
-    descEn: "Microservices architecture with JWT authentication, user management and Swagger documentation.",
-    tagFr: "Back-end",
-    tagEn: "Back-end",
-    technologies: ["Node.js", "Docker", "PostgreSQL", "Redis"],
-    image: "/api-microservices-architecture-diagram.jpg",
-    accent: "#FFD93D",
-  },
-  {
-    slug: "fitness-mobile",
-    titleFr: "Application Mobile Fitness",
-    titleEn: "Fitness Mobile App",
-    descFr: "Application de suivi d'entraînement avec statistiques, objectifs personnalisés et partage social.",
-    descEn: "Workout tracking application with statistics, personalized goals and social sharing.",
-    tagFr: "Mobile",
-    tagEn: "Mobile",
-    technologies: ["React Native", "Firebase", "Node.js"],
-    image: "/fitness-app-interface.png",
-    accent: "#10B981",
-  },
 ]
 
 /** Résout les champs bilingues d'un projet pour la langue courante. */

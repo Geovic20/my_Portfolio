@@ -48,6 +48,7 @@ export default function AboutPage() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">{t("about.sectionTitle")}</h2>
             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">{t("about.description1")}</p>
             <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">{t("about.description2")}</p>
+            <p className="text-gray-600 text-sm sm:text-base md:text-lg leading-relaxed">{t("about.description3")}</p>
           </div>
         </div>
       </section>

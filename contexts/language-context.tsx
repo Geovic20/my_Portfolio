@@ -210,12 +210,6 @@ const translations = {
       ctaDesc: "N'hésitez pas à me contacter pour discuter de votre prochain projet web.",
       ctaButton: "Me Contacter",
     },
-    testimonials: {
-      title: "Ce que mes clients disent",
-      about: "à propos de",
-      work: "mon travail",
-      subtitle: "Découvrez les retours de clients satisfaits qui ont collaboré avec moi sur leurs projets web.",
-    },
     portfolioPreview: {
       title: "Jetez un œil à mon",
       titleHighlight: "portfolio",
@@ -385,12 +379,6 @@ const translations = {
       ctaTitle: "Have a project in mind?",
       ctaDesc: "Don't hesitate to contact me to discuss your next web project.",
       ctaButton: "Contact Me",
-    },
-    testimonials: {
-      title: "What my clients say",
-      about: "about",
-      work: "my work",
-      subtitle: "Discover feedback from satisfied clients who have worked with me on their web projects.",
     },
     portfolioPreview: {
       title: "Take a look at my",

@@ -158,19 +158,12 @@ const translations = {
         "Développeur full-stack, de l'interface utilisateur aux systèmes backend. Je m'intéresse autant au code qu'à l'architecture, aux performances et à la qualité.",
       sectionTitle: "Mon Parcours",
       description1:
-        "Passionné par le développement web et les nouvelles technologies, je me spécialise dans la création d'applications web modernes utilisant les dernières technologies du marché.",
+        "Je suis Géovic KPOSSILANDE, développeur full-stack et aspirant ingénieur logiciel.",
       description2:
-        "Mon expertise couvre à la fois le front-end et le back-end, me permettant de créer des solutions complètes et performantes adaptées aux besoins de chaque projet.",
-      skillsTitle: "Mes Compétences",
-      frontend: "Front-End",
-      frontendDesc:
-        "HTML5, CSS3, React.js, Next.js avec une attention particulière au design et à l'expérience utilisateur.",
-      backend: "Back-End",
-      backendDesc: "Node.js, Python (Django), Java avec une maîtrise des bases de données SQL et des API REST.",
-      devops: "DevOps",
-      devopsDesc: "Docker, CI/CD, déploiement et maintenance d'applications en production.",
-      softskills: "Soft Skills",
-      softskillsDesc: "Travail d'équipe, communication efficace, gestion de projet et résolution de problèmes.",
+        "Mon parcours a commencé par le développement d'applications web, en construisant des interfaces et des systèmes backend de bout en bout. Au fil de mes projets, ma curiosité s'est progressivement déplacée au-delà de l'implémentation : je cherche aujourd'hui à comprendre comment concevoir des logiciels fiables, maintenables et capables d'évoluer.",
+      description3:
+        "Je développe ainsi mes compétences en architecture logicielle, system design, algorithmes, tests, DevOps et systèmes distribués, tout en continuant à construire des applications concrètes.",
+      skillsTitle: "Software Engineering",
       educationTitle: "Cursus Scolaire",
       education1Title: "Licence en Informatique",
       education1School: "Institut de Formation et de Recherche en Informatique (IFRI)",
@@ -216,12 +209,6 @@ const translations = {
       ctaTitle: "Vous avez un projet en tête ?",
       ctaDesc: "N'hésitez pas à me contacter pour discuter de votre prochain projet web.",
       ctaButton: "Me Contacter",
-    },
-    testimonials: {
-      title: "Ce que mes clients disent",
-      about: "à propos de",
-      work: "mon travail",
-      subtitle: "Découvrez les retours de clients satisfaits qui ont collaboré avec moi sur leurs projets web.",
     },
     portfolioPreview: {
       title: "Jetez un œil à mon",
@@ -344,18 +331,12 @@ const translations = {
         "Full-stack developer, from user interfaces to backend systems. Equally interested in the code, the architecture, the performance and the quality.",
       sectionTitle: "My Journey",
       description1:
-        "Passionate about web development and new technologies, I specialize in creating modern web applications using the latest market technologies.",
+        "I am Géovic KPOSSILANDE, a full-stack developer and aspiring software engineer.",
       description2:
-        "My expertise covers both front-end and back-end, allowing me to create complete and high-performance solutions tailored to each project's needs.",
-      skillsTitle: "My Skills",
-      frontend: "Front-End",
-      frontendDesc: "HTML5, CSS3, React.js, Next.js with special attention to design and user experience.",
-      backend: "Back-End",
-      backendDesc: "Node.js, Python (Django), Java with mastery of SQL databases and REST APIs.",
-      devops: "DevOps",
-      devopsDesc: "Docker, CI/CD, deployment and maintenance of production applications.",
-      softskills: "Soft Skills",
-      softskillsDesc: "Teamwork, effective communication, project management and problem solving.",
+        "My path began with web application development, building interfaces and backend systems end to end. As my projects progressed, my curiosity moved beyond implementation: today I want to understand how to design software that is reliable, maintainable and built to evolve.",
+      description3:
+        "So I am building my skills in software architecture, system design, algorithms, testing, DevOps and distributed systems, while continuing to build real applications.",
+      skillsTitle: "Software Engineering",
       educationTitle: "Education",
       education1Title: "Master's in Computer Science",
       education1School: "University of Technology",
@@ -398,12 +379,6 @@ const translations = {
       ctaTitle: "Have a project in mind?",
       ctaDesc: "Don't hesitate to contact me to discuss your next web project.",
       ctaButton: "Contact Me",
-    },
-    testimonials: {
-      title: "What my clients say",
-      about: "about",
-      work: "my work",
-      subtitle: "Discover feedback from satisfied clients who have worked with me on their web projects.",
     },
     portfolioPreview: {
       title: "Take a look at my",
